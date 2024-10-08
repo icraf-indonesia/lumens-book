@@ -78,10 +78,43 @@
     "href": "06-hydrology.html",
     "title": "6  Hydrology",
     "section": "",
-    "text": "##Heading1 testing teinsting2",
+    "text": "6.1 Description\nThis module estimates soil erosion by water using the Revised Universal Soil Loss Equation (RUSLE). The result of this analysis allows stakeholders to understand the extent of erosion at one or two specified times across a given area, contributing to the formulation of spatially explicit strategies on enhancing soil conservation.\nRUSLE is an empirical model widely used in soil conservation and watershed management. It provides a method for estimating annual soil loss due to water erosion. A key feature of RUSLE is predicting long-term average annual soil loss.",
     "crumbs": [
       "Quantification of Environmental Services (QUES)",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quantification of Ecosystem Services – Hydrological Assessment</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quantification of Ecosystem Services – Hydrological Assessment (QuES-H)</span>"
+    ]
+  },
+  {
+    "objectID": "06-hydrology.html#usage",
+    "href": "06-hydrology.html#usage",
+    "title": "6  Hydrology",
+    "section": "6.2 Usage",
+    "text": "6.2 Usage\n\n6.2.1 Workflow\nThe workflow for this module can be divided into four key steps.\n\nData preparation. In this step, users prepare the necessary data, noting the correct input specifications.\nUpload data. Once all the data has been prepared, users input the data by clicking Browse or manually dragging the input data to the correct attribute.\nSet parameters. The user sets the parameters of the multiple time series analysis they wish to conduct, which includes map resolution, single or two step analysis options, and output directory. For single step analysis, the user must input the landcover map and assign the year of analysis. For two step analysis, the user must input T1 and T2 landcover map and assign the years for both data. Finally, the user selects the output directory they wish to have the results stored.\nAnalyze results. Upon completion, the user will find the analysis results in the module or directly in the output folder. The module generates a webpage report containing a brief description of the module, summary of input data, and maps on soil loss analysis components.\n\n\n\n\nWorkflow QuES-H\n\n\n\n\n6.2.2 Step-by-step instructions\nStep 1: Uploading Data\n\nInput your data into the left-hand side of the module by selecting the ‘Browse’ button for each data or drag your file from your computer into the data input box. Ensure that you upload the correct data input for each parameter. A blue bar with ‘Upload complete’ will appear once you have successfully input your data for each parameter.\n\nTotal Annual Precipitation Map: Click “Browse” and select your GeoTIFF file containing the total annual precipitation data (mm/year).\nDigital Elevation Model (DEM): Click “Browse” and select your GeoTIFF file containing the digital elevation model data (meters above sea level).\nSoil Properties:  Click “Browse” for each of the following soil property GeoTIFF files: Clay content (%); Silt content (%); Sand content (%); and Organic Soil content (%)\n\nLand Cover Map: Click “Browse” and select your GeoTIFF file containing the land cover classification data.\nPlanning Units: Click “Browse” and select your planning unit shapefile. Select your planning unit file in .dbf, .prj, .shp, and .shx extensions. You may drag more than 1 file at once.\nLook-up Table for Land Use/Cover, C-factor, and P-factor: Click “Browse” and select your CSV file containing the lookup table with columns for:\n\nLand cover class\nC-factor value\nP-factor value\n\n\n\n\nUploading Data into QuES-H LUMENS-shiny\n\n\n\nStep 2: Setting Analysis Parameters\n\nSet your desired map resolution. The default map resolution is 100, meaning 1-pixel accounts for 100m x 100m. Note that the lower the resolution input means the more detailed each pixel can store information, hence will require longer processing time.\n\nChoose whether you would like to create a single or two step time series analysis by selecting the corresponding circle.\n\nInput your land cover/land use map and label the corresponding year (T1). If you selected two step time series analysis, do the same for your T2.\n\nSelect your output directory where you wish to save your report. Finish by clicking ‘Select’.\n\n\nStep 3: Running the Analysis\n\nClick on ‘Run QuES-H Analysis’ to initiate the analysis. A progress bar will appear on the bottom right corner, indicating the analysis status. Once completed, you may access your results by clicking ‘Open Report’ or ‘Open Output Folder’.\n\n\n\n\n6.2.3 Tips\n\nWhile detailed long-term data is preferred when available, this module focuses on methods using publicly available spatial data.\nUsers should ensure that all raster inputs are properly aligned (i.e., with identical projection systems, extents, and resolutions) and have consistent no-data values.\nThe look-up table allows flexibility in assigning C and P factors based on local conditions or literature values.",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quantification of Ecosystem Services – Hydrological Assessment (QuES-H)</span>"
+    ]
+  },
+  {
+    "objectID": "06-hydrology.html#data-requirements",
+    "href": "06-hydrology.html#data-requirements",
+    "title": "6  Hydrology",
+    "section": "6.3 Data Requirements",
+    "text": "6.3 Data Requirements\n\n6.3.1 Input Data & Parameters\n\n\n\n\n\n\n\n\n\n\n\nNo\nData Name\nType\nFormat\nProjection Requirements\nDescription\n\n\n1.\nLand Cover Map (Time 1)\nCategorical raster\nGeoTIFF\nUTM\nA map classifying land use types for the start year.\n\n\n2.\nLand Cover Map (Time 2)\nCategorical raster\nGeoTIFF\nUTM\nA map classifying land use types for the end year\n\n\n3.\nTotal annual precipitation\nCategorical raster\nGeoTIFF\n\nA map of total rainfall over a year (mm/year)\n\n\n4.\nDigital Elevation Model (DEM)\nCategorical raster\nGeoTIFF\n\nA map of the terrain elevation (meters above sea level)\n\n\n5.\nSoil properties maps\nCategorical raster\nGeoTIFF\n\nMaps of clay, silt, sand, and soil organic content.\n\n\n6.\nLand cover look up table\nTable\nCSV\n\nA table containing raster values with corresponding land cover class.\n\n\n7.\nPlanning unit\nVector\nShapefile\n\nA polygon shapefile of administrative or management zones.\n\n\n\n\n\n6.3.2 Example Datasets\nPractice data sets used in this module can be accessed at agroforestri.id/lumens-ques-h\n\n\n6.3.3 Data Acquisition\nLand cover maps can often be obtained from global or official national data. For creating your own land cover maps from satellite imagery, consider using software such as Google Earth Engine, ArcGIS and R.",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quantification of Ecosystem Services – Hydrological Assessment (QuES-H)</span>"
+    ]
+  },
+  {
+    "objectID": "06-hydrology.html#outputs",
+    "href": "06-hydrology.html#outputs",
+    "title": "6  Hydrology",
+    "section": "6.4 Outputs",
+    "text": "6.4 Outputs\n\n6.4.1 Output Files",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Quantification of Ecosystem Services – Hydrological Assessment (QuES-H)</span>"
     ]
   },
   {
