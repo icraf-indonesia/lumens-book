@@ -1,7 +1,7 @@
-# Regional Economic Descriptive Analysis {#sec-regeco1 .unnumbered}
+# Regional Economic Descriptive Analysis {#sec-regeco1}
 
 ---
-title: "[Regional Economic Descriptive Analysis]"
+title: "8 Regional Economic Descriptive Analysis"
 ---
 
 ## 1. Description

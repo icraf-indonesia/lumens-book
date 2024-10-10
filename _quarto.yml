@@ -63,6 +63,7 @@ book:
         - 04-carbon.qmd
         - 05-biodiversity.qmd
         - 06-hydrology.qmd
+        - 12-lasem.qmd
     - part: ta.qmd
       chapters: 
         - 07-profitability.qmd
@@ -72,7 +73,6 @@ book:
       chapters: 
         - 10-scenario.qmd
         - 11-lucm.qmd
-    - 12-lasem.qmd
     - text: "---"
     - summary.qmd
     

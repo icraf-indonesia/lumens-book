@@ -1,7 +1,7 @@
 # Regional Economic Projection {#sec-regeco2 .unnumbered}
 
 ---
-title: "[Regional Economic Projection]"
+title: "9 Regional Economic Projection"
 ---
 
 ## 1. Description
