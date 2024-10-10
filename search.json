@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "LUMENS Help Guide",
+    "title": "LUMENS User Guide",
     "section": "",
     "text": "Preface",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#intro-outline",
     "href": "index.html#intro-outline",
-    "title": "LUMENS Help Guide",
+    "title": "LUMENS User Guide",
     "section": "In this book",
     "text": "In this book\nThe first part of the book is all about giving you all the tools you need to start your package development journey and we highly recommend that you read it in order. We begin in 5  Biodiversity with a run through the complete development of a small package.",
     "crumbs": [
