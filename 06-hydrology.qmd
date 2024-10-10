@@ -9,9 +9,12 @@ editor:
 
 ## Description
 
-This module estimates soil erosion by water using the Revised Universal Soil Loss Equation (RUSLE). The result of this analysis allows stakeholders to understand the extent of erosion at one or two specified times across a given area, contributing to the formulation of spatially explicit strategies on enhancing soil conservation.
+This module estimates soil erosion by water using the Revised Universal Soil Loss Equation (RUSLE).
+The result of this analysis allows stakeholders to understand the extent of erosion at one or two specified times across a given area, contributing to the formulation of spatially explicit strategies on enhancing soil conservation.
 
-RUSLE is an empirical model widely used in soil conservation and watershed management. It provides a method for estimating annual soil loss due to water erosion. A key feature of RUSLE is predicting long-term average annual soil loss.
+RUSLE is an empirical model widely used in soil conservation and watershed management.
+It provides a method for estimating annual soil loss due to water erosion.
+A key feature of RUSLE is predicting long-term average annual soil loss.
 
 ## Usage
 
@@ -19,13 +22,21 @@ RUSLE is an empirical model widely used in soil conservation and watershed manag
 
 The workflow for this module can be divided into four key steps.
 
-1.  **Data preparation**. In this step, users prepare the necessary data, noting the correct input specifications.
+1.  **Data preparation**.
+    In this step, users prepare the necessary data, noting the correct input specifications.
 
-2.  **Upload data**. Once all the data has been prepared, users input the data by clicking Browse or manually dragging the input data to the correct attribute.
+2.  **Upload data**.
+    Once all the data has been prepared, users input the data by clicking Browse or manually dragging the input data to the correct attribute.
 
-3.  **Set parameters**. The user sets the parameters of the multiple time series analysis they wish to conduct, which includes map resolution, single or two step analysis options, and output directory. For single step analysis, the user must input the landcover map and assign the year of analysis. For two step analysis, the user must input T1 and T2 landcover map and assign the years for both data. Finally, the user selects the output directory they wish to have the results stored.
+3.  **Set parameters**.
+    The user sets the parameters of the multiple time series analysis they wish to conduct, which includes map resolution, single or two step analysis options, and output directory.
+    For single step analysis, the user must input the landcover map and assign the year of analysis.
+    For two step analysis, the user must input T1 and T2 landcover map and assign the years for both data.
+    Finally, the user selects the output directory they wish to have the results stored.
 
-4.  **Analyze results**. Upon completion, the user will find the analysis results in the module or directly in the output folder. The module generates a webpage report containing a brief description of the module, summary of input data, and maps on soil loss analysis components.
+4.  **Analyze results**.
+    Upon completion, the user will find the analysis results in the module or directly in the output folder.
+    The module generates a webpage report containing a brief description of the module, summary of input data, and maps on soil loss analysis components.
 
 ![](images/QuES-H/QuesH-1.png)
 
@@ -33,7 +44,9 @@ The workflow for this module can be divided into four key steps.
 
 **Step 1: Uploading Data**
 
-1.  Input your data into the left-hand side of the module by selecting the ‘Browse’ button for each data or drag your file from your computer into the data input box. Ensure that you upload the correct data input for each parameter. A blue bar with ‘Upload complete’ will appear once you have successfully input your data for each parameter.
+1.  Input your data into the left-hand side of the module by selecting the ‘Browse’ button for each data or drag your file from your computer into the data input box.
+    Ensure that you upload the correct data input for each parameter.
+    A blue bar with ‘Upload complete’ will appear once you have successfully input your data for each parameter.
 
     -   Total Annual Precipitation Map: Click “Browse” and select your GeoTIFF file containing the total annual precipitation data (mm/year).
 
@@ -43,7 +56,9 @@ The workflow for this module can be divided into four key steps.
 
 2.  Land Cover Map: Click “Browse” and select your GeoTIFF file containing the land cover classification data.
 
-3.  Planning Units: Click “Browse” and select your planning unit shapefile. Select your planning unit file in .dbf, .prj, .shp, and .shx extensions. You may drag more than 1 file at once.
+3.  Planning Units: Click “Browse” and select your planning unit shapefile.
+    Select your planning unit file in .dbf, .prj, .shp, and .shx extensions.
+    You may drag more than 1 file at once.
 
 4.  Look-up Table for Land Use/Cover, C-factor, and P-factor: Click “Browse” and select your CSV file containing the lookup table with columns for:
 
@@ -57,7 +72,9 @@ The workflow for this module can be divided into four key steps.
 
 **Step 2: Setting Analysis Parameters**
 
-1.  Set your desired map resolution. The default map resolution is 100, meaning 1-pixel accounts for 100m x 100m. Note that the lower the resolution input means the more detailed each pixel can store information, hence will require longer processing time.
+1.  Set your desired map resolution.
+    The default map resolution is 100, meaning 1-pixel accounts for 100m x 100m.
+    Note that the lower the resolution input means the more detailed each pixel can store information, hence will require longer processing time.
 
     ![](images/QuES-H/QuesH-3.png)
 
@@ -65,17 +82,21 @@ The workflow for this module can be divided into four key steps.
 
     ![](images/QuES-H/QuesH-4.png)
 
-3.  Input your land cover/land use map and label the corresponding year (T1). If you selected two step time series analysis, do the same for your T2.
+3.  Input your land cover/land use map and label the corresponding year (T1).
+    If you selected two step time series analysis, do the same for your T2.
 
     ![](images/QuES-H/QuesH-5.png)
 
-4.  Select your output directory where you wish to save your report. Finish by clicking ‘Select’.
+4.  Select your output directory where you wish to save your report.
+    Finish by clicking ‘Select’.
 
     ![](images/QuES-H/QuesH6.png)
 
 **Step 3: Running the Analysis**
 
-Click on ‘Run QuES-H Analysis’ to initiate the analysis. A progress bar will appear on the bottom right corner, indicating the analysis status. Once completed, you may access your results by clicking ‘Open Report’ or ‘Open Output Folder’.
+Click on ‘Run QuES-H Analysis’ to initiate the analysis.
+A progress bar will appear on the bottom right corner, indicating the analysis status.
+Once completed, you may access your results by clicking ‘Open Report’ or ‘Open Output Folder’.
 
 ![](images/QuES-H/QuesH-7.png)
 
@@ -92,7 +113,7 @@ Click on ‘Run QuES-H Analysis’ to initiate the analysis. A progress bar will
 ### Input Data & Parameters
 
 |  |  |  |  |  |  |
-|----|----|----|----|----|----|
+|------------|------------|------------|------------|------------|------------|
 | **No** | **Data Name** | **Type** | **Format** | **Projection Requirements** | **Description** |
 | 1\. | Land Cover Map (Time 1) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the start year. |
 | 2\. | Land Cover Map (Time 2) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the end year |
@@ -108,14 +129,15 @@ Practice data sets used in this module can be accessed at **agroforestri.id/lume
 
 ### Data Acquisition
 
-Land cover maps can often be obtained from global or official national data. For creating your own land cover maps from satellite imagery, consider using software such as Google Earth Engine, ArcGIS and R.
+Land cover maps can often be obtained from global or official national data.
+For creating your own land cover maps from satellite imagery, consider using software such as Google Earth Engine, ArcGIS and R.
 
 ## Outputs
 
 ### Output Files
 
 |  |  |  |
-|----|----|----|
+|---------------|---------------|------------------------------------------|
 | **File Name** | **Type** | **Description** |
 | c_factor | TIF File | A map of crop management values |
 | soil_erosion | TIF File | A map of soil erosion susceptibility. |
@@ -133,7 +155,9 @@ The QuES-H module report consists of 4 main sections: Summary, Brief Description
 
 **Section 1: Summary**
 
-In this section, you will find basic details of the data you have input, including total area of interest, periods of analysis, estimated soil erosion rates specific to each class, and overall patterns within the study period. For policymakers, the summary highlights a general understanding of soil erosion dynamics, which may be used as initial context for strategic planning on soil conservation efforts.  
+In this section, you will find basic details of the data you have input, including total area of interest, periods of analysis, estimated soil erosion rates specific to each class, and overall patterns within the study period.
+For policymakers, the summary highlights a general understanding of soil erosion dynamics, which may be used as initial context for strategic planning on soil conservation efforts.
+ 
 
 **Section 2: Module Description**
 
@@ -143,37 +167,53 @@ This section states the focus of the module, namely on soil erosion risk assessm
 
 This section will present all input data to users in map format.
 
-1.  **Total annual precipitation map displays the distribution of rainfall across the region over the span of one year.** Each pixel in the map represents the total rainfall in millimeters (mm) per year. Areas with the highest total annual precipitation are displayed in yellow-green shades, while blue-purple shades indicate regions with lower annual precipitation. Identifying areas with higher or lower levels of precipitation allows users to understand conditions of water availability, agricultural potential and flood risks.
+1.  **Total annual precipitation map displays the distribution of rainfall across the region over the span of one year.** Each pixel in the map represents the total rainfall in millimeters (mm) per year.
+    Areas with the highest total annual precipitation are displayed in yellow-green shades, while blue-purple shades indicate regions with lower annual precipitation.
+    Identifying areas with higher or lower levels of precipitation allows users to understand conditions of water availability, agricultural potential and flood risks.
 
     ![](images/QuES-H/QuesH-13.png)
 
-2.  **The Digital Elevation Model (DEM) map illustrates the terrain elevation meters above sea level.** Areas with higher elevations are displayed in yellow-green, while areas with lower elevations are displayed in blue-purple. This map is helpful for understanding the topography of the area, providing insight towards drainage patterns and erosion potential.
+2.  **The Digital Elevation Model (DEM) map illustrates the terrain elevation meters above sea level.** Areas with higher elevations are displayed in yellow-green, while areas with lower elevations are displayed in blue-purple.
+    This map is helpful for understanding the topography of the area, providing insight towards drainage patterns and erosion potential.
 
     ![](images/QuES-H/QuesH-9.png){width="343" height="226"}
 
-3.  **Soil properties maps showcase soil characteristics, defined by clay, silt, sand, and organic soil content, at a depth of 0 to 5cm in the study area.** Each map has a color scale bar indicating the range of values, with the highest values in the yellow-green spectrum and the lowest in the blue-purple spectrum. Use this to identify variations across the region. By analyzing all four maps together, you can better understand the relationships between soil components (e.g., areas with high clay content may have different organic carbon levels compared to sandy regions).
+3.  **Soil properties maps showcase soil characteristics, defined by clay, silt, sand, and organic soil content, at a depth of 0 to 5cm in the study area.** Each map has a color scale bar indicating the range of values, with the highest values in the yellow-green spectrum and the lowest in the blue-purple spectrum.
+    Use this to identify variations across the region.
+    By analyzing all four maps together, you can better understand the relationships between soil components (e.g., areas with high clay content may have different organic carbon levels compared to sandy regions).
 
     ![](images/QuES-H/QuesH-10.png)
 
-    -   **Sand content map** shows the content of sand in soil at a depth of 0 to 5cm. Areas with high sand content tend to have more porous soils with better drainage but lower nutrient retention, while areas with lower sand content may have more compact soils.
+    -   **Sand content map** shows the content of sand in soil at a depth of 0 to 5cm.
+        Areas with high sand content tend to have more porous soils with better drainage but lower nutrient retention, while areas with lower sand content may have more compact soils.
 
-    -   **Silt content map** shows the content of silt in soil at the same depth. Areas with higher silt content are likely to retain moisture better than those with less silt, influencing water retention capacity and soil fertility. However, the same areas may also be prone to erosion.
+    -   **Silt content map** shows the content of silt in soil at the same depth.
+        Areas with higher silt content are likely to retain moisture better than those with less silt, influencing water retention capacity and soil fertility.
+        However, the same areas may also be prone to erosion.
 
-    -   **Clay content map** illustrates the percentage of clay in soil. Areas with rich clay content may hold more water and nutrients than areas with less clay but may have poor drainage potentially leading to waterlogging in certain areas.
+    -   **Clay content map** illustrates the percentage of clay in soil.
+        Areas with rich clay content may hold more water and nutrients than areas with less clay but may have poor drainage potentially leading to waterlogging in certain areas.
 
-    -   **Soil organic carbon (SOC) content map** illustrates soil organic carbon in grams per kilogram. High SOC areas are generally more fertile and better for plant growth, while lower SOC regions might indicate depleted or less fertile soils.
+    -   **Soil organic carbon (SOC) content map** illustrates soil organic carbon in grams per kilogram.
+        High SOC areas are generally more fertile and better for plant growth, while lower SOC regions might indicate depleted or less fertile soils.
 
-4.  **Land cover map** displays spatial information on land cover classes of the study area within the set time frame. Using a categorical raster format, each pixel displays different land cover classes. The map is aided with a legend on the right-hand side that lists the land cover classes and their corresponding colours.
+4.  **Land cover map** displays spatial information on land cover classes of the study area within the set time frame.
+    Using a categorical raster format, each pixel displays different land cover classes.
+    The map is aided with a legend on the right-hand side that lists the land cover classes and their corresponding colours.
 
     ![](images/QuES-H/QuesH-11.png)
 
     ![](images/QuES-H/QuesH-12.png)
 
-    -   **Identify the dominant land cover classes and their spatial distribution.** The dominant color on the map shows the dominant land cover classes in the study area. In the picture above, for instance, dark blue areas are found in the bottom left-hand corner of the map while blue-green areas are found in most of the study area. This may indicate that forest areas, shown in dark blue, are found in concentration, while the majority of the study area shown in blue-green are of agriculture-based land uses, such as rubber, oil palm, and agroforestry.
+    -   **Identify the dominant land cover classes and their spatial distribution.** The dominant color on the map shows the dominant land cover classes in the study area.
+        In the picture above, for instance, dark blue areas are found in the bottom left-hand corner of the map while blue-green areas are found in most of the study area.
+        This may indicate that forest areas, shown in dark blue, are found in concentration, while the majority of the study area shown in blue-green are of agriculture-based land uses, such as rubber, oil palm, and agroforestry.
 
-    -   **Compare changes in land use over time.** You may identify shifts in the spatial distribution of land use classes over T1 dan T2. For example, the increase of green pixels in 2010 from previously dark blue pixels in 2005 may indicate agricultural expansion on once forest-based land uses.
+    -   **Compare changes in land use over time.** You may identify shifts in the spatial distribution of land use classes over T1 dan T2.
+        For example, the increase of green pixels in 2010 from previously dark blue pixels in 2005 may indicate agricultural expansion on once forest-based land uses.
 
-5.  **Planning unit map** displays the management zones of the study area. The map shown corresponds to the legend on the right-hand side of the map, indicating the color of each zone.
+5.  **Planning unit map** displays the management zones of the study area.
+    The map shown corresponds to the legend on the right-hand side of the map, indicating the color of each zone.
 
 **Section 4: Results**
 
@@ -181,27 +221,44 @@ The report presents two analysis results, namely RUSLE factor maps and estimated
 
 **RUSLE Factor Maps**
 
-This section visualizes each RUSLE factor through a spatial distribution map. Users will find distribution maps for R factor (rainfall erosivity), K factor (soil erodibility), LS factor (length and steepness), C factor (cover management), and P factor (practice management). For all maps, areas with higher factor values displayed to towards the shade of yellow, while areas with lower factor values are displayed to towards the shade of dark blue.
+This section visualizes each RUSLE factor through a spatial distribution map.
+Users will find distribution maps for R factor (rainfall erosivity), K factor (soil erodibility), LS factor (length and steepness), C factor (cover management), and P factor (practice management).
+For all maps, areas with higher factor values displayed to towards the shade of yellow, while areas with lower factor values are displayed to towards the shade of dark blue.
 
-1.  **R factor** map shows the spatial distribution of the effect of rainfall on soil erosion. The erosivity of rainfall is interpreted as the average amount of rainfall erosivity energy per area, calculated based on hourly rainfall intensities and averaged over a year. Rainfall erosivity is mostly affected by short-term, high-intensity precipitation events. This factor was generated using the method of Moore (1979). Higher R factor areas suggest more intense rainfall events that are more likely to cause erosion. Lower R factor areas have less erosive rainfall.
+1.  **R factor** map shows the spatial distribution of the effect of rainfall on soil erosion.
+    The erosivity of rainfall is interpreted as the average amount of rainfall erosivity energy per area, calculated based on hourly rainfall intensities and averaged over a year.
+    Rainfall erosivity is mostly affected by short-term, high-intensity precipitation events.
+    This factor was generated using the method of Moore (1979).
+    Higher R factor areas suggest more intense rainfall events that are more likely to cause erosion.
+    Lower R factor areas have less erosive rainfall.
 
     ![](images/QuES-H/QuesH-13.png)
 
-2.  **K factor** map illustrates the spatial distribution of soil erodibility based on its soil properties measured in tons of soil loss per hectare per unit of rainfall erosivity. This factor was generated using the method of Williams (1995) by combining physical soil parameters such as sand, silt, and clay fractions, along with the organic carbon (or organic matter) fraction in the topsoil layer. Areas with higher K factor values are more prone to erosion than areas with lower K factor values.
+2.  **K factor** map illustrates the spatial distribution of soil erodibility based on its soil properties measured in tons of soil loss per hectare per unit of rainfall erosivity.
+    This factor was generated using the method of Williams (1995) by combining physical soil parameters such as sand, silt, and clay fractions, along with the organic carbon (or organic matter) fraction in the topsoil layer.
+    Areas with higher K factor values are more prone to erosion than areas with lower K factor values.
 
     ![](images/QuES-H/QuesH-14.png)
 
-3.  **LS factor** map (unitless) displays the combined effects of length and slope on erosion potential. This factor was generated from digital elevation model data using the method of Moore & Burch (1986). Areas with higher LS factor values suggest steeper or longer slopes, contributing to higher potential of soil erosion.
+3.  **LS factor** map (unitless) displays the combined effects of length and slope on erosion potential.
+    This factor was generated from digital elevation model data using the method of Moore & Burch (1986).
+    Areas with higher LS factor values suggest steeper or longer slopes, contributing to higher potential of soil erosion.
 
     ![](images/QuES-H/QuesH-15.png)
 
-4.  **C factor** maps (unitless) illustrate the effects of vegetation cover on the overall impact of soil erosion. This factor was generated using land use classifications from land cover products and agronomic statistics, with C factor values are either available from government data, global data products, or derived from research references. The C factor relates the soil loss from land with specific vegetation cover to the soil loss that would occur from clean-tilled, continuously fallow land. Areas with more vegetation are more protected from higher impacts of raindrop on the soil.
+4.  **C factor** maps (unitless) illustrate the effects of vegetation cover on the overall impact of soil erosion.
+    This factor was generated using land use classifications from land cover products and agronomic statistics, with C factor values are either available from government data, global data products, or derived from research references.
+    The C factor relates the soil loss from land with specific vegetation cover to the soil loss that would occur from clean-tilled, continuously fallow land.
+    Areas with more vegetation are more protected from higher impacts of raindrop on the soil.
 
     In two step time series analysis, the module will generate the C factor map for T1 dan T2.
 
     ![](images/QuES-H/QuesH-16.png)
 
-5.  **P factor** map (unitless) illustrates the spatial distribution of support practice impact on soil erosion. The control practices can reduce the potential of erosion by reducing the amount and velocity of run-off, modifying the flow pattern and direction of surface run-off. The value ranges of P factor are between 0 and 1. In this model, as the P factor is assumed to be equal to 1, the module generates a single-color map.
+5.  **P factor** map (unitless) illustrates the spatial distribution of support practice impact on soil erosion.
+    The control practices can reduce the potential of erosion by reducing the amount and velocity of run-off, modifying the flow pattern and direction of surface run-off.
+    The value ranges of P factor are between 0 and 1.
+    In this model, as the P factor is assumed to be equal to 1, the module generates a single-color map.
 
     ![](images/QuES-H/QuesH-17.png)
 
@@ -211,25 +268,34 @@ Users will find estimation of soil erosion at landscape level and at the plannin
 
 1.  **Soil Erosion at Landscape Level**
 
-    Soil erosion results are categorized into six categories, namely Slight erosion (\<5 ton/ha/year), Mild (5-25 ton/ha/year), Moderate (25-50 ton/ha/year), Strong (50-80 ton/ha/year), Very Strong (80-150 ton/ha/year) and Severe (\>150 ton/ha/year). The darker the color on the map indicates a lighter estimation of soil erosion. Conversely, a lighter color suggests stronger soil erosion. For two step analysis, the module will generate maps for T1 and T2.
+    Soil erosion results are categorized into six categories, namely Slight erosion (\<5 ton/ha/year), Mild (5-25 ton/ha/year), Moderate (25-50 ton/ha/year), Strong (50-80 ton/ha/year), Very Strong (80-150 ton/ha/year) and Severe (\>150 ton/ha/year).
+    The darker the color on the map indicates a lighter estimation of soil erosion.
+    Conversely, a lighter color suggests stronger soil erosion.
+    For two step analysis, the module will generate maps for T1 and T2.
 
     ![](images/clipboard-1339903909.png)
 
-    For a more detailed account of soil erosion per category, the soil erosion map distribution correlates with the subsequent table. Users will find and be able sort soil erosion rates by area and percentage.
+    For a more detailed account of soil erosion per category, the soil erosion map distribution correlates with the subsequent table.
+    Users will find and be able sort soil erosion rates by area and percentage.
 
-    As policymakers, the information on soil erosion at the landscape level suggests important insights on the severity of soil erosion, where it occurs, and trend. In particular, the information may be useful in identifying high risk areas, understand landscape variability, assert baseline data and foster collaboration in implementing soil conservation strategies.
+    As policymakers, the information on soil erosion at the landscape level suggests important insights on the severity of soil erosion, where it occurs, and trend.
+    In particular, the information may be useful in identifying high risk areas, understand landscape variability, assert baseline data and foster collaboration in implementing soil conservation strategies.
 
     ![](images/QuES-H/QuesH-20.png)
 
 2.  **Soil Erosion at Planning Unit Level**
 
-    The following three tables present the crosstabulation of soil erosion categories for each planning unit in the study year(s). For instance, users will be able to identify and compare the total area of all soil erosion categories planning unit *Hutan Lindung* (ha), noting that planning unit *Perkebunan* and *Pertanian Lahan Basah* has a larger area with severe soil erosion risk, at 1.442 and 1.522 ha respectively in 2010. For two step analysis, users are supplemented with a trajectory table of soil erosion changes from T1 to T2.
+    The following three tables present the crosstabulation of soil erosion categories for each planning unit in the study year(s).
+    For instance, users will be able to identify and compare the total area of all soil erosion categories planning unit *Hutan Lindung* (ha), noting that planning unit *Perkebunan* and *Pertanian Lahan Basah* has a larger area with severe soil erosion risk, at 1.442 and 1.522 ha respectively in 2010.
+    For two step analysis, users are supplemented with a trajectory table of soil erosion changes from T1 to T2.
 
 Insights from these tables could provide valuable information for policymakers, for instance:
 
-1.  **Identify priority areas for intervention.** With spatially explicit insights, policymakers will be able to identify high-risk areas for soil erosion mitigation and landscape restoration. Using the planning unit, land management policies may be able to focus on land uses that are more vulnerable to soil erosion.
+1.  **Identify priority areas for intervention.** With spatially explicit insights, policymakers will be able to identify high-risk areas for soil erosion mitigation and landscape restoration.
+    Using the planning unit, land management policies may be able to focus on land uses that are more vulnerable to soil erosion.
 
-2.  **Identify spatial distribution of soil erosion risk factors.** The module generates maps for each RUSLE factor, suggesting spatially explicit information on areas with lower or higher risk. This allows for more specific strategies on increasing soil erosion resiliency.
+2.  **Identify spatial distribution of soil erosion risk factors.** The module generates maps for each RUSLE factor, suggesting spatially explicit information on areas with lower or higher risk.
+    This allows for more specific strategies on increasing soil erosion resiliency.
 
 3.  **Identify trends over multiple periods of time.** Trajectory of soil erosion between T1 and T2 provides insight into the areas with no changes, decreasing and increasing risk of soil erosion.
 
@@ -245,7 +311,8 @@ This module calculates soil erosion based on the Revised Universal Soil Loss Equ
 
 -   P factor in this module uses RUSLE factors preparation methods found here: <https://penerbit.brin.go.id/press/catalog/download/538/511/11585?inline=1> In this model, P factor is assumed 1.
 
--   C factor is assumed to directly influenced by the vegetation type, stage of vegetation growth and percentage of vegetation cover. In currect script, we use this from Erencin et al. 2000; Panagos et al. 2015 [(PDF) Spatial Estimation of Soil Erosion Using RUSLE Modeling: A case study of Dolakha District, Nepal (researchgate.net)](https://www.researchgate.net/publication/340816115_Spatial_Estimation_of_Soil_Erosion_Using_RUSLE_Modeling_A_case_study_of_Dolakha_District_Nepal)
+-   C factor is assumed to directly influenced by the vegetation type, stage of vegetation growth and percentage of vegetation cover.
+    In currect script, we use this from Erencin et al. 2000; Panagos et al. 2015 [(PDF) Spatial Estimation of Soil Erosion Using RUSLE Modeling: A case study of Dolakha District, Nepal (researchgate.net)](https://www.researchgate.net/publication/340816115_Spatial_Estimation_of_Soil_Erosion_Using_RUSLE_Modeling_A_case_study_of_Dolakha_District_Nepal)
 
 ### **Limitations**
 
