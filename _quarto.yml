@@ -7,7 +7,7 @@ prefer-html: true
 
 # book options
 book:
-  title: "LUMENS Help Guide"
+  title: "LUMENS User Guide"
   favicon: /media/favicon.ico
   author: 
     - name: Alfa Nugraha
@@ -25,7 +25,7 @@ book:
   sidebar: 
     style: floating
     background: light
-    logo: /media/logo-small.png
+    logo: /media/Logomark_LUMENS.png
     tools: 
       - icon: shuffle 
         menu:
@@ -63,6 +63,7 @@ book:
         - 04-carbon.qmd
         - 05-biodiversity.qmd
         - 06-hydrology.qmd
+        - 12-lasem.qmd
     - part: ta.qmd
       chapters: 
         - 07-profitability.qmd
@@ -72,7 +73,6 @@ book:
       chapters: 
         - 10-scenario.qmd
         - 11-lucm.qmd
-    - 12-lasem.qmd
     - text: "---"
     - summary.qmd
     
