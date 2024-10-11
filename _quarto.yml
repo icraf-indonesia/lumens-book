@@ -10,18 +10,10 @@ book:
   title: "LUMENS User Guide"
   favicon: /media/favicon.ico
   author: 
-    - name: Alfa Nugraha
-      email: a.nugraha@cifor-icraf.org
+    - name: ICRAF Indonesia
+      email: ICRAF-IndonesiaMedia@cifor-icraf.org
       affiliations:
       - name: CIFOR-ICRAF
-    - name: Dony Indiarto
-      email: d.indiarto@cifor-icraf.org
-    - name: Yumna Karimah
-      email: y.karimah@cifor-icraf.org
-    - name: Faza Iza Mahezs
-      email: f.mahezs@cifor-icraf.org
-    - name: Andree Ekadinata
-      email: a.ekadinata@cifor-icraf.org
   sidebar: 
     style: floating
     background: light
