@@ -448,6 +448,72 @@
     ]
   },
   {
+    "objectID": "11-lucm.html",
+    "href": "11-lucm.html",
+    "title": "8  Land Use Change Modelling using DINAMICA",
+    "section": "",
+    "text": "8.1 1. Description\n[The Land Use Change Modelling using Dinamica module in LUMENS simulates future land use/cover changes using a time and space model. It incorporates variables such as elevation, proximity to roads, and other regional characteristics to predict land use dynamics. This module uses result from Scenario Builder by providing data-driven insights into how different factors influence land use over time. There are two parts: Train Model and Simulate. Policymakers can use this tool to explore the outcomes of various development, conservation, and land management strategies, enabling informed decisions to address challenges like deforestation and infrastructure development while balancing environmental sustainability and growth.]",
+    "crumbs": [
+      "Scenario Simulation and Development (SCIENDO)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>[Land Use Change Modelling using Dinamica]</span>"
+    ]
+  },
+  {
+    "objectID": "11-lucm.html#usage",
+    "href": "11-lucm.html#usage",
+    "title": "8  Land Use Change Modelling using DINAMICA",
+    "section": "8.2 2. Usage",
+    "text": "8.2 2. Usage\n\n8.2.1 2.1 Workflow\n[Land Use Change Modelling using Dinamica module in LUMENS begins with data preparation, where users upload land cover maps from different time periods, along with a look-up table that defines land cover classes and land use types. These inputs are critical for calibrating the model. Next, users select relevant spatial variables such as elevation, distance to roads, and slope, which influence land use changes in the region. The model then trains by overlaying historical land cover data and selected variables to detect patterns in land use change. Afterward, users configure future scenarios by adjusting variables. The module runs the simulation based on these inputs, generating predictive maps and statistical outputs that show potential future land use changes and emissions.]\n\n\n\n\n8.2.2 2.2 Step-by-step instructions\n\n\n8.2.3 Step 1: Uploading Land Cover Data\n\nUpload Land Cover Map:\n\nClick the “Upload Raster” button.\nSelect your land cover map (in GeoTIFF format) from your computer.\nOnce uploaded, confirm the map appears in the interface.\n(Screenshot )\n\nInput Year:\n\nInput the corresponding year for the land cover map in the “Year” field.\n\nUpload Land Use Matrix:\n\nClick the “Upload Land Use Matrix” button.\nSelect your land use matrix file, which defines transitions between land use categories.\nConfirm the matrix is correctly loaded.\n\nUpload Planning Unit:\n\nClick the “Upload Planning Unit” button.\nSelect your planning unit layer, which represents the spatial boundaries for analysis.\n\nAdd Factor or Folder Path\n\n\n\n8.2.4 Step 2: Training the Model\n\nClick the “Run Analysis” button.\nThe system will process the inputs, using the land cover map, year, and land use matrix to identify land use transitions.\nA progress bar will indicate the training status.\nOnce complete, the results will be saved and available for use in the next step.\n(Screenshot )\n\n\n\n8.2.5 Step 3: Simulating Future Scenarios\n\nNavigate to the “Simulate” Tab:\n\nOnce training is complete, click on the “Simulate” tab.\n\nInput QUES-C Table:\n\nUpload the QUES-C table, which contains the parameters needed for future simulations.\n\nSelect Trained Model:\n\nFrom the dropdown menu, select the previously trained model as the input for simulation.\n\nSet Repetition Number:\n\nEnter the number of iterations for the simulation in the “Repetition” field. This value determines how many iterations the model will run to generate reliable projections.\n\n\n\n\n8.2.6 Step 4: Running the Simulation\n\nRun Simulation:\n\nClick the “Run Analysis” button to start the process.\nA progress bar will appear, indicating the simulation’s status.\nOnce complete, the results, will be displayed in the “Output Directory”.\n\n\n\n\n8.2.7 Step 5: Analyzing Results\n\nView Results:\n\nNavigate to the “Results” tab to view simulated land use maps and detailed statistical outputs.\nUse the analysis outputs to interpret future land use patterns and their potential impacts.\n\n\n\n\n8.2.8 2.3 Tips\n\n[Provide helpful hints or things to consider while using the module. Example:\n\nFor large datasets, the analysis may take some time to complete.\nEnsure that all input maps have the same extent and resolution. ]",
+    "crumbs": [
+      "Scenario Simulation and Development (SCIENDO)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>[Land Use Change Modelling using Dinamica]</span>"
+    ]
+  },
+  {
+    "objectID": "11-lucm.html#data-requirements",
+    "href": "11-lucm.html#data-requirements",
+    "title": "8  Land Use Change Modelling using DINAMICA",
+    "section": "8.3 3. Data Requirements",
+    "text": "8.3 3. Data Requirements\n\n8.3.1 3.1 Input Data & Parameters\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo\nData Name\nType\nFormat\nProjection Requirements\nDescription\n\n\n\n\n\n\n\n1.\nLand Use/ Cover Map (Time 1)\nCategorical raster\nGeoTIFF\nUTM\nA map classifying land use types for the start year.\n\n\n\n\n\n2.\nLand Use/ Cover Map (Time 2)\nCategorical raster\nGeoTIFF\nUTM\nA map classifying land use types for the end year.\n\n\n\n\n\n3\nPlanning units\nCategorical raster\nGeoTIFF\nUTM\nCategorical raster\nGeoTIFF\nUTM\n…\n\n\n\n[Include rows for ALL required input data and parameters.]\n\n\n8.3.2 3.2 Example Datasets\n[Provide links to sample datasets users can download and use for practice.]\n\n\n8.3.3 3.3 Data Acquisition\n[Provide guidance on finding suitable data, linking to common sources if applicable. Example: - Land cover maps can often be obtained from [link to data source]. - For creating your own land cover maps from satellite imagery, consider using software such as [link to software].]",
+    "crumbs": [
+      "Scenario Simulation and Development (SCIENDO)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>[Land Use Change Modelling using Dinamica]</span>"
+    ]
+  },
+  {
+    "objectID": "11-lucm.html#outputs",
+    "href": "11-lucm.html#outputs",
+    "title": "8  Land Use Change Modelling using DINAMICA",
+    "section": "8.4 4. Outputs",
+    "text": "8.4 4. Outputs\n\n8.4.1 4.1 Output Files\n\n\n\n\n\n\n\n\nFile Name\nType\nDescription\n\n\n\n\nland_use_change_map_[SUFFIX].tif\nRaster\nMap depicting changes in land use between the specified time periods.\n\n\ntransition_matrix_[SUFFIX].csv\nCSV\nTable showing the area of land that transitioned between each land use category.\n\n\nreport_[SUFFIX].html\nHTML\nA report summarizing the analysis results with visualizations and tables.\n\n\n…\n…\n…\n\n\n\n[Include rows for ALL output files, including the report.]\n\n\n8.4.2 4.2 Report Interpretation\n[This section will guide users on understanding the content of the generated report.] [Provide specific examples of how to interpret findings from the report, addressing real-world planning concerns. Example: - If the report shows a significant increase in deforestation within a protected area, policymakers could use this information to investigate the causes and strengthen enforcement efforts. - The transition matrix can help identify which land use types are most prone to conversion, allowing planners to target those areas with conservation or sustainable management practices.]",
+    "crumbs": [
+      "Scenario Simulation and Development (SCIENDO)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>[Land Use Change Modelling using Dinamica]</span>"
+    ]
+  },
+  {
+    "objectID": "11-lucm.html#theoretical-background",
+    "href": "11-lucm.html#theoretical-background",
+    "title": "8  Land Use Change Modelling using DINAMICA",
+    "section": "8.5 5. Theoretical Background",
+    "text": "8.5 5. Theoretical Background\n\n8.5.1 5.1 Model Description\n[Explain the underlying model or algorithm conceptually, using diagrams or flowcharts. Avoid code. Example: - This module uses a simple change detection method to identify pixels that have changed land use category between the input maps. - (Include a diagram showing how change detection works)]\n\n\n8.5.2 5.2 Key Assumptions\n\n[List the key assumptions made by the model. Example:\n\nThe land cover maps accurately represent land use categories.\nLand use changes occur linearly over the analysis period.]\n\n\n\n\n8.5.3 5.3 Limitations\n\n[Explain the model’s limitations and potential sources of error/uncertainty. Example:\n\nThis module does not account for gradual land use changes or changes that occur within a single land use category.\nAccuracy is limited by the quality and resolution of the input land cover maps.]",
+    "crumbs": [
+      "Scenario Simulation and Development (SCIENDO)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>[Land Use Change Modelling using Dinamica]</span>"
+    ]
+  },
+  {
+    "objectID": "11-lucm.html#references",
+    "href": "11-lucm.html#references",
+    "title": "8  Land Use Change Modelling using DINAMICA",
+    "section": "8.6 References",
+    "text": "8.6 References\n[Use BibTeX to cite relevant scientific literature.]",
+    "crumbs": [
+      "Scenario Simulation and Development (SCIENDO)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>[Land Use Change Modelling using Dinamica]</span>"
+    ]
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
     "title": "Summary",
