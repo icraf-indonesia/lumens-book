@@ -55,9 +55,9 @@ The workflow for this module can be divided into four key steps.
 
 Insert framework
 
-### Step-by-step instructions
+## Step-by-step instructions
 
-**Step 1: Data Preparation**
+### **Step 1: Data Preparation**
 
 1.  **Prepare the raster input look up table** (saved in CSV format) containing the details of the input data as required in section 3.3.
     The look up table should include five columns: ID, parameter, name_parameter, availability, and raster_path (data directory).
@@ -67,62 +67,271 @@ Insert framework
     Users will need to adjust these paths to match their local or deployment environments.
     Below is an example of the CSV structure:
 
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
-| **ID** | **parameter**         | **parameter_name**     | **availability** | **raster_path**                                            |
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
-| 1      | Average temperature   | clim_temperature_avg   | Yes              | data_prep/Sulsel/annual_climate/clim_temperature_avg.tif   |
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
-| 2      | Average precipitation | clim_precipitation_tot | Yes              | data_prep/Sulsel/annual_climate/clim_precipitation_tot.tif |
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
-| 3      | Total wet months      | clim_wet_months_tot    | Yes              | data_prep/Sulsel/annual_climate/clim_wet_months.tif        |
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
-| 4      | Humidity              | clim_humidity          | Yes              | data_prep/Sulsel/annual_climate/clim_humidity.tif          |
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
-| 5      | Drainage              | soil_drainage          | No               | data_prep/Sulsel/tanah/hwsd/soil_DRAINAGE.tif              |
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
-| etc.   |                       |                        |                  |                                                            |
-+--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| **ID**   | **parameter**         | **parameter_name**     | **availability** | **raster_path**                                            |
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 1        | Average temperature   | clim_temperature_avg   | Yes              | data_prep/Sulsel/annual_climate/clim_temperature_avg.tif   |
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 2        | Average precipitation | clim_precipitation_tot | Yes              | data_prep/Sulsel/annual_climate/clim_precipitation_tot.tif |
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 3        | Total wet months      | clim_wet_months_tot    | Yes              | data_prep/Sulsel/annual_climate/clim_wet_months.tif        |
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 4        | Humidity              | clim_humidity          | Yes              | data_prep/Sulsel/annual_climate/clim_humidity.tif          |
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 5        | Drainage              | soil_drainage          | No               | data_prep/Sulsel/tanah/hwsd/soil_DRAINAGE.tif              |
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| etc.     |                       |                        |                  |                                                            |
++----------+-----------------------+------------------------+------------------+------------------------------------------------------------+
 
-1.  **Prepare crop suitability parameters and intervention lookup table** (saved in CSV format). For the exercise in this module, crop suitability parameters and intervention look-up table were obtained from the Ministry of Agriculture’s land suitability technical manual which can be accessed [here](https://repository.pertanian.go.id/items/fecc0ad1-d13b-46f5-add6-8917dcccc7a3).
+1.  **Prepare crop suitability parameters and intervention lookup table** (saved in CSV format).
+    For the exercise in this module, crop suitability parameters and intervention look-up table were obtained from the Ministry of Agriculture’s land suitability technical manual which can be accessed [here](https://repository.pertanian.go.id/items/fecc0ad1-d13b-46f5-add6-8917dcccc7a3).
 
     The crop suitability parameter look up table should include five columns: name_common, name_sp, class, name_parameter, value, unit, as follows.
 
-+-----------------+--------------------+-----------+--------------------+-----------+----------+
-| **Name_common** | **Name_sp**        | **Class** | **Name_parameter** | **value** | **unit** |
-+-----------------+--------------------+-----------+--------------------+-----------+----------+
-| Robusta coffee  | Coffea canephora   | S1        | clim_dry_months    | 2-3       | month    |
-+-----------------+--------------------+-----------+--------------------+-----------+----------+
-| Robusta coffee  | Coffea canephora   | S1        | clim_humidity      | 45-80     | \%       |
-+-----------------+--------------------+-----------+--------------------+-----------+----------+
-| Robusta coffee  | Coffea canephora   | S2        | clim_dry_months    | 3-5       | month    |
-+-----------------+--------------------+-----------+--------------------+-----------+----------+
-| Robusta coffee  | Coffea canephora   | S2        | clim_dry_months    | 2\<       | month    |
-+-----------------+--------------------+-----------+--------------------+-----------+----------+
-| …               |                    |           |                    |           |          |
-+-----------------+--------------------+-----------+--------------------+-----------+----------+
++-----------------+------------------+-----------+--------------------+-----------+----------+
+| **Name_common** | **Name_sp**      | **Class** | **Name_parameter** | **value** | **unit** |
++-----------------+------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora | S1        | clim_dry_months    | 2-3       | month    |
++-----------------+------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora | S1        | clim_humidity      | 45-80     | \%       |
++-----------------+------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora | S2        | clim_dry_months    | 3-5       | month    |
++-----------------+------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora | S2        | clim_dry_months    | 2\<       | month    |
++-----------------+------------------+-----------+--------------------+-----------+----------+
+| …               |                  |           |                    |           |          |
++-----------------+------------------+-----------+--------------------+-----------+----------+
 
 While your intervention look up table should include the following columns: no; land_characteristics; name_parameter; intervention; low; med; high
 
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **no**  | **land_characteristics**   | n**ame_parameter**     | **intervention** | **low** | **med** | **high**  |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **1**   | Annual average temperature | clim_temperature_avg   | FALSE            | NA      | NA      | NA        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **2**   | Dry months                 | clim_dry_months        | TRUE             | NA      | \+      | ++        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **3**   | Annual rainfall            | clim_precipitation_tot | TRUE             | NA      | \+      | ++        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **5**   | Drainage                   | soil_drainage          | TRUE             | NA      | \+      | ++        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **6**   | Texture                    | soil_texture           | FALSE            | NA      | NA      | NA        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **7**   | Coarse fragments           | soil_coarse_fragments  | TRUE             | NA      | NA      | \+        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **8**   | Effective depth            | soil_depth             | TRUE             | NA      | \+      | \+        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **9**   | Peat maturity              | soil_peat_maturity     | TRUE             | NA      | NA      | \+        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **10**  | Peat thickness             | soil_peat_depth        | TRUE             | NA      | NA      | \+        |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
-| **…**   |                            |                        |                  |         |         |           |
-+---------+----------------------------+------------------------+------------------+---------+---------+-----------+
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **no** | **land_characteristics**   | n**ame_parameter**     | **intervention** | **low** | **med** | **high** |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **1**  | Annual average temperature | clim_temperature_avg   | FALSE            | NA      | NA      | NA       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **2**  | Dry months                 | clim_dry_months        | TRUE             | NA      | \+      | ++       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **3**  | Annual rainfall            | clim_precipitation_tot | TRUE             | NA      | \+      | ++       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **5**  | Drainage                   | soil_drainage          | TRUE             | NA      | \+      | ++       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **6**  | Texture                    | soil_texture           | FALSE            | NA      | NA      | NA       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **7**  | Coarse fragments           | soil_coarse_fragments  | TRUE             | NA      | NA      | \+       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **8**  | Effective depth            | soil_depth             | TRUE             | NA      | \+      | \+       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **9**  | Peat maturity              | soil_peat_maturity     | TRUE             | NA      | NA      | \+       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **10** | Peat thickness             | soil_peat_depth        | TRUE             | NA      | NA      | \+       |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+| **…**  |                            |                        |                  |         |         |          |
++--------+----------------------------+------------------------+------------------+---------+---------+----------+
+
+1.   Once prepared, run the LaSEM shiny application to start the module.
+
+### Step 2: Uploading Data
+
+1.  **Users will first upload the raster input table (csv).** Upload the look up table by clicking Browse.
+    Once selected, users can press Select and a progress bar will appear indicating that the upload is complete.
+
+2.  **Upload the** **crop suitability parameters** for the crop you wish to analyse.
+    A progress bar will appear indicating that the upload is complete.
+
+3.  **Upload the intervention look-up table** of the crop you wish to analyse.
+    A progress bar will appear indicating that the upload is complete.
+
+4.  **Choose your output directory and press Select.** The chosen directory will be shown in the bar below.
+
+### Step 3: Analyze Results
+
+1.  Finish data uploads and run analysis by clicking the Analysis tab.
+
+## Tips
+
+-   The module produces more accurate results when more input data is uploaded. An indicator (pH, temperature, total precipitation, etc) may be significant in evaluating crop suitability despite it being unavailable. Hence, the principle stands: garbage in, garbage out.
+-   When making your raster input look up table, make sure that you change your raster path location accordingly. Note that some directories may use “\\” in the directory path which needs to be adjusted to accommodate “/” in the application. Otherwise, the application will not be able to detect the directory path and will not compute.
+
+## Data Requirements
+
+### Input Data & Parameters
+
+### Example Datasets
+
+Practice data sets used in this module can be accessed at **agroforestri.id/lumens-lasem**
+
+### Data Acquisition
+
+For this module, input data may be obtained from global or national-level data sources.
+The example dataset for this module, i.e. the crop suitability parameters and intervention lookup table, are obtained from the Ministry of Agriculture’s land suitability technical manual which can be accessed [here](https://repository.pertanian.go.id/items/fecc0ad1-d13b-46f5-add6-8917dcccc7a3).
+
+## Outputs
+
+### Output Files
+
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **No** | **Data Name**                      | **Format** | **Projection Requirements**  | **Description**                                                                                                                                     | **Source**                                                                                                                                                         |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1\.    | Average temperature                | TIFF       | Spatial resolution 1km x 1km | Air temperature affects the physiological processes of plants, determining the suitability of the climate for the growth of a particular plant.     | Bioclimatic variables for Worldclim 2.1 - <https://www.worldclim.org/data/worldclim21.html>                                                                        |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://geodata.ucdavis.edu/climate/worldclim/2_1/base/wc2.1_30s_bio.zip>                                                                                         |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2\.    | Total precipitation                | TIFF       | Spatial resolution 1km x 1km | Shows the amount of annual rainfall. Indicator of water availability for plants.                                                                    |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 3\.    | Dry months                         | TIFF       | Spatial resolution 1km x 1km | Number of months with average rainfall equal to or less than 100 mm/month                                                                           | Derived from Monthly Rainfall from Worldclim 2.1                                                                                                                   |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://www.worldclim.org/data/worldclim21.html>                                                                                                                  |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://geodata.ucdavis.edu/climate/worldclim/2_1/base/wc2.1_30s_prec.zip>                                                                                        |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 4\.    | Wet months                         | TIFF       | Spatial resolution 1km x 1km | Number of months with average rainfall of more than 200 mm/month                                                                                    | Derived from Monthly Rainfall from Worldclim 2.1                                                                                                                   |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://www.worldclim.org/data/worldclim21.html>                                                                                                                  |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://geodata.ucdavis.edu/climate/worldclim/2_1/base/wc2.1_30s_prec.zip>                                                                                        |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 5\.    | Humidity                           | TIFF       | Spatial resolution 1km x 1km | The level of air wetness or the amount of water vapor in the air                                                                                    | CHELSA                                                                                                                                                             |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://chelsa-climate.org/downloads/>                                                                                                                            |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_hurs_mean_1981-2010_V.2.1.tif>                               |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 6\.    | Soil drainage                      | TIFF       | 1:250.000                    | Shows the soil's ability to drain water.                                                                                                            | RePPRoT/ Harmonized World Soil Database v 2.0 - <https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v20/en/>         |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | [https://www.fao.org/fileadmin/user_upload/soils/HWSD Viewer/HWSD_RASTER.zip](https://s3.eu-west-1.amazonaws.com/data.gaezdev.aws.fao.org/HWSD/HWSD2_RASTER.zip)   |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 7\.    | Soil texture                       | TIFF       | 250m x 250 m                 | Comparison of grains of sand (0.05 - 2.0 mm), dust (0.002 - 0.05 mm) and clay (\< 0.002 mm).                                                        | OpenLandMap - <https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_TEXTURE-CLASS_USDA-TT_M_v02>                                        |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 8\.    | Soil coarse fragments              | TIFF       | 250m x 250 m                 | Information on coarse fragment content, materials measuring \> 2 mm, affect water retention capacity, drainage and ease of tillage.                 | SoilGrids250m 2.0-  <https://soilgrids.org/>                                                                                                                       |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | ISRIC - Index of /soilgrids/latest/data/                                                                                                                           |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 9\.    | Soil depth                         | TIFF       | 1km x 1km                    | The depth of the soil layer that can be utilized for the development of plant roots.                                                                | Global 1-km Gridded Thickness of Soil, Regolith, and Sedimentary Deposit Layers -  <https://daac.ornl.gov/SOILS/guides/Global_Soil_Regolith_Sediment.html>         |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | <https://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1304>                                                                                                             |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 10\.   | Average cation exchange capacity   | TIFF       | 250m x 250m                  | Describes the soil's ability to store and release cations such as Ca, Mg, K, and Na.                                                                | SoilGrids250m 2.0-  <https://soilgrids.org/>                                                                                                                       |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | ISRIC - Index of /soilgrids/latest/data/                                                                                                                           |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 11\.   | Soil base saturation               | TIFF       | 1:250.000                    | Shows the percentage of exchange complexes occupied by base cations. This value correlates with soil fertility and soil pH.                         | RePPRoT/ Harmonized World Soil Database v 2.0 -  <https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v20/en/>        |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | [https://www.fao.org/fileadmin/user_upload/soils/HWSD Viewer/HWSD_RASTER.zip](https://s3.eu-west-1.amazonaws.com/data.gaezdev.aws.fao.org/HWSD/HWSD2_RASTER.zip)   |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 12\.   | Soil pH                            | TIFF       | 250m x 250m                  | An indicator of the level of acidity or alkalinity of soil.                                                                                         | SoilGrids250m 2.0-  <https://soilgrids.org/>                                                                                                                       |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | ISRIC - Index of /soilgrids/latest/data/                                                                                                                           |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 13\.   | Organic carbon content             | TIFF       | 250m x 250m                  | Organic carbon content in the soil describes the content of organic matter in the soil.                                                             | SoilGrids250m 2.0-  <https://soilgrids.org/>                                                                                                                       |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | ISRIC - Index of /soilgrids/latest/data/                                                                                                                           |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 14\.   | Nitrogen content                   | TIFF       | 250m x 250m                  | Shows the amount of nitrogen in various forms in the soil.                                                                                          | SoilGrids250m 2.0-  <https://soilgrids.org/>                                                                                                                       |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | ISRIC - Index of /soilgrids/latest/data/                                                                                                                           |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 15\.   | Soil salinity                      | TIFF       | 1:250.000                    | An indicator of the concentration of dissolved salts in the soil.                                                                                   | RePPRoT/ Harmonized World Soil Database v 2.0 -  <https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v20/en/>        |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | [https://www.fao.org/fileadmin/user_upload/soils/HWSD Viewer/HWSD_RASTER.zip](https://s3.eu-west-1.amazonaws.com/data.gaezdev.aws.fao.org/HWSD/HWSD2_RASTER.zip)   |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 16\.   | Slope                              | TIFF       | 30m x 30m                    | Land slope                                                                                                                                          | NASA SRTM Digital Elevation 30m -  <https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003>                                                  |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 17\.   | Soil alkalinity                    | TIFF       | 1:250.000                    | Alkalinity, the amount of exchangeable sodium (Na) content (%), indicates the toxicity of sodium for plants.                                        | RePPRoT/ Harmonized World Soil Database v 2.0 -  <https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v20/en/>        |
+|        |                                    |            |                              |                                                                                                                                                     |                                                                                                                                                                    |
+|        |                                    |            |                              |                                                                                                                                                     | [https://www.fao.org/fileadmin/user_upload/soils/HWSD Viewer/HWSD_RASTER.zip](https://s3.eu-west-1.amazonaws.com/data.gaezdev.aws.fao.org/HWSD/HWSD2_RASTER.zip)   |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 18\.   | Peat depth                         | TIFF       | 1:250.000                    | Thickness of peat                                                                                                                                   | Ministry of Agriculture                                                                                                                                            |
++--------+------------------------------------+------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+### Report Interpretation
+
+The LaSEM module report consists of 4 main sections: suitability map, suitability map by factors, attribute table and download results.
+
+**Section 1: Suitability Map**
+
+In this section, users will find a map that shows the land suitability for your chosen crop.
+Users may choose, on the top right-hand corner of the map, the type of suitability map based on the different kinds of analysis: actual suitability, low intervention suitability, medium intervention suitability, and high intervention suitability.
+
+The different colors of the map indicate the level of suitability for the given crop.
+
+-   **Red** indicates no suitability for the crop, labelled ‘N’.
+
+-   **Orange** indicates low suitability, labelled 'S3’.
+
+-   **Light green** indicates medium suitability, labelled 'S2’.
+
+-   **Dark green** indicates high suitability, labelled ‘S3’.
+
+For each intervention map, crop suitability shifts based on the level of intervention implemented.
+As interventions increase, more land becomes suitable for crop growth.
+
+**Section 2: Suitability Map by Factors**
+
+In this tab, users may find the input data for all crop parameters in spatial form.
+This is useful for users to have a closer look into the data input for the study.
+
+**Section 3: Attribute Table**
+
+This section presents the crop suitability in tabular form.
+Users can find the actual crop suitability results in the **suitability** column, presenting the values N to S1.
+The succeeding columns, **limiting_factor_actual** and **limiting_factor_potential**, shows what parameter has the lowest value that leads to the given results.
+
+As the intervention increases, the suitability value changes into suitability potential, which is shown in columns **suitability_potential_low, suitability_potential_med,** and **suitability_potential_high.**
+
+Insights from these maps and diagram could provide valuable information for policymakers, for instance:
+
+-   **Identify areas with the lowest and highest suitability for a particular crop as well as the limiting factors that most influences the suitability.** While a crop may grow in almost all areas within a land, but some areas may be more productive and produce higher quality crop.
+    Identifying the areas with lowest crop suitability and its limiting factor provides useful information for policymakers to adjust crop policies, for example disburse seed and fertilizers into targeted areas with lower crop suitability.
+
+-   **Input for local crop masterplan, regional planning and agricultural investments.** This module can identify areas that have the highest suitability based on its biophysical characteristics.
+    Combining the results with regional spatial plans may be developed into strategic planning with evidence-based analysis and investment plans which maximizes on the potentials of a given area.
+
+## Theoretical Background
+
+### Model Description
+
+Ensuring ood security relies heavily on the availability of sustainable lands for agriculture.
+As lands pressures to land increases, such as the growing impact of climate change towards the conditions of the land and cultivation practices, trade policies, and population growth, the need for finding suitable land for sustainable agriculture production becomes very important (Jaisli, 2018).
+
+The LaSEM module looks into biophysical factors to evaluate and provide spatially explicit recommendations based on the suitability of certain crop growth at a chosen study area.
+Using global and regional data, the model evaluates specific crop growth parameters with the biophysical conditions of the study area.
+The model concludes by producing a suitability map, potential suitability map and limitation map based on the analysis results.
+
+### Key Assumptions
+
+In this analysis, it is assumed that according to Liebig’s law of the minimum, the factor that is at the most limiting level will determine the final suitability level.
+
+### Limitations
+
+-   Lack of easily accessible, up-to-date and accurate data input for a geographic scale of 1:50,000.
+    The land suitability map in this poster was produced using climate and soil condition maps from the global level, i.e., SoilGrids 2.0 and Worldclim 2.0​
+
+-   Social and economic indicators have not been accommodated in the criteria for assessing land suitability.​
+
+-   The categorical approach ignores aspects of uncertainty in the data and the interrelationships between biophysical factors that make up suitability.​
+
+-   The output is semi-quantitative, not enough to show land productivity in terms of weight for each unit of land.​
+
+-   The module cannot consider the potential impact of extreme weather.
+
+## References
+
+Jaisli, I., Laube, P., Trachsel, S., Ochsner, P., & Schuhmacher, S.
+(2018).
+Suitability evaluation system for the production and sourcing of agricultural commodities.
+Computers and Electronics in Agriculture.
+doi:10.1016/j.compag.2018.02.002
