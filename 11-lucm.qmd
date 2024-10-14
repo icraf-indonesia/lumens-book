@@ -120,6 +120,7 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
 
 ### 3.1 Input Data & Parameters
 
+
 | No | Data Name | Type | Format | Projection Requirements | Description |   |   |   |
 |--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | 1\. | Land Use/ Cover Map (Time 1) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the start year. |  |  |  |
