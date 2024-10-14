@@ -7,25 +7,17 @@ prefer-html: true
 
 # book options
 book:
-  title: "LUMENS Help Guide"
+  title: "LUMENS User Guide"
   favicon: /media/favicon.ico
   author: 
-    - name: Alfa Nugraha
-      email: a.nugraha@cifor-icraf.org
+    - name: ICRAF Indonesia
+      email: ICRAF-IndonesiaMedia@cifor-icraf.org
       affiliations:
       - name: CIFOR-ICRAF
-    - name: Dony Indiarto
-      email: d.indiarto@cifor-icraf.org
-    - name: Yumna Karimah
-      email: y.karimah@cifor-icraf.org
-    - name: Faza Iza Mahezs
-      email: f.mahezs@cifor-icraf.org
-    - name: Andree Ekadinata
-      email: a.ekadinata@cifor-icraf.org
   sidebar: 
     style: floating
     background: light
-    logo: /media/logo-small.png
+    logo: /media/Logomark_LUMENS.png
     tools: 
       - icon: shuffle 
         menu:
@@ -63,6 +55,7 @@ book:
         - 04-carbon.qmd
         - 05-biodiversity.qmd
         - 06-hydrology.qmd
+        - 12-lasem.qmd
     - part: ta.qmd
       chapters: 
         - 07-profitability.qmd
@@ -72,7 +65,6 @@ book:
       chapters: 
         - 10-scenario.qmd
         - 11-lucm.qmd
-    - 12-lasem.qmd
     - text: "---"
     - summary.qmd
     

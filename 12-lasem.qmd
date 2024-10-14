@@ -1,1 +1,128 @@
 # Land Suitability Evaluation Module (LaSEM) {#sec-lasem .unnumbered}
+
+---
+title: "Land Suitability Evaluation Module (LaSEM)"
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+## Overview
+
+The Land Suitability Evaluation Module (LaSEM) is an R-based application that helps to produce land suitability maps for food crops, horticulture or plantations according to their biophysical suitability, providing information for formulating policies related to land use and increasing the productivity of key commodities.
+​It is important to note that the map strictly considers biophysical factors and does not account for land allocation maps or maps resulting from specific policies or rules.
+
+For a given location (pixel), the analysis could provide answers on:
+
+-   What crops are suitable for growing in this location?
+
+-   What are the limiting factors for crop growth in this location?
+
+-   How can the limiting factors be addressed?
+
+LaSEM works by analyzing biophysical parameters that influence crop growth.
+The data used is in the form of a map in raster format with values ​​that will be classified into suitability classes for the relevant crop commodities based on the "[Land Evaluation for Agricultural Commodities 2011](https://www.slideshare.net/slideshow/%20Evaluation-lahan-for-Commodities-%20agriculture/89498148)" guidelines.
+To produce the actual land suitability class of an area, parameter maps are used in overlap analysis in LaSEM.
+
+Once produced, land suitability maps categorize the study area into areas as follows:
+
+-   Biophysically suitable for a crop or farming system
+
+-   Not biophysically suitable, but the limiting factors can be addressed
+
+-   Not biophysically suitable, and the limiting factors cannot be addressed
+
+This module can be used by agriculturalists and land use planners to make informed decisions about crop production.
+Some specific examples include:
+
+-   A government agency could use this software to develop a land use plan for a region.
+
+-   A research organization could use this software to study the impact of climate change on crop production.
+
+## Usage
+
+### Workflow
+
+The workflow for this module can be divided into four key steps.
+
+1.  **Data preparation**.
+    In this step, users prepare the necessary data, noting the correct input specifications.
+
+2.  **Upload data**.
+    Once all the data has been prepared, users input the data by clicking Browse or manually dragging the input data to the correct attribute.
+
+3.  **Analyze results.** Upon completion, the user will find the analysis results in the module or directly in the output folder.
+
+Insert framework
+
+### Step-by-step instructions
+
+**Step 1: Data Preparation**
+
+1.  **Prepare the raster input look up table** (saved in CSV format) containing the details of the input data as required in section 3.3.
+    The look up table should include five columns: ID, parameter, name_parameter, availability, and raster_path (data directory).
+    Unavailable data can be labelled with NA.
+
+    Please be aware that the raster file paths specified in the configuration CSV (\`raster_path\`) are currently set to absolute paths specific to the users' environment.
+    Users will need to adjust these paths to match their local or deployment environments.
+    Below is an example of the CSV structure:
+
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| **ID** | **parameter**         | **parameter_name**     | **availability** | **raster_path**                                            |
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 1      | Average temperature   | clim_temperature_avg   | Yes              | data_prep/Sulsel/annual_climate/clim_temperature_avg.tif   |
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 2      | Average precipitation | clim_precipitation_tot | Yes              | data_prep/Sulsel/annual_climate/clim_precipitation_tot.tif |
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 3      | Total wet months      | clim_wet_months_tot    | Yes              | data_prep/Sulsel/annual_climate/clim_wet_months.tif        |
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 4      | Humidity              | clim_humidity          | Yes              | data_prep/Sulsel/annual_climate/clim_humidity.tif          |
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| 5      | Drainage              | soil_drainage          | No               | data_prep/Sulsel/tanah/hwsd/soil_DRAINAGE.tif              |
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+| etc.   |                       |                        |                  |                                                            |
++--------+-----------------------+------------------------+------------------+------------------------------------------------------------+
+
+1.  **Prepare crop suitability parameters and intervention lookup table** (saved in CSV format). For the exercise in this module, crop suitability parameters and intervention look-up table were obtained from the Ministry of Agriculture’s land suitability technical manual which can be accessed [here](https://repository.pertanian.go.id/items/fecc0ad1-d13b-46f5-add6-8917dcccc7a3).
+
+    The crop suitability parameter look up table should include five columns: name_common, name_sp, class, name_parameter, value, unit, as follows.
+
++-----------------+--------------------+-----------+--------------------+-----------+----------+
+| **Name_common** | **Name_sp**        | **Class** | **Name_parameter** | **value** | **unit** |
++-----------------+--------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora   | S1        | clim_dry_months    | 2-3       | month    |
++-----------------+--------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora   | S1        | clim_humidity      | 45-80     | \%       |
++-----------------+--------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora   | S2        | clim_dry_months    | 3-5       | month    |
++-----------------+--------------------+-----------+--------------------+-----------+----------+
+| Robusta coffee  | Coffea canephora   | S2        | clim_dry_months    | 2\<       | month    |
++-----------------+--------------------+-----------+--------------------+-----------+----------+
+| …               |                    |           |                    |           |          |
++-----------------+--------------------+-----------+--------------------+-----------+----------+
+
+While your intervention look up table should include the following columns: no; land_characteristics; name_parameter; intervention; low; med; high
+
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **no**  | **land_characteristics**   | n**ame_parameter**     | **intervention** | **low** | **med** | **high**  |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **1**   | Annual average temperature | clim_temperature_avg   | FALSE            | NA      | NA      | NA        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **2**   | Dry months                 | clim_dry_months        | TRUE             | NA      | \+      | ++        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **3**   | Annual rainfall            | clim_precipitation_tot | TRUE             | NA      | \+      | ++        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **5**   | Drainage                   | soil_drainage          | TRUE             | NA      | \+      | ++        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **6**   | Texture                    | soil_texture           | FALSE            | NA      | NA      | NA        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **7**   | Coarse fragments           | soil_coarse_fragments  | TRUE             | NA      | NA      | \+        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **8**   | Effective depth            | soil_depth             | TRUE             | NA      | \+      | \+        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **9**   | Peat maturity              | soil_peat_maturity     | TRUE             | NA      | NA      | \+        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **10**  | Peat thickness             | soil_peat_depth        | TRUE             | NA      | NA      | \+        |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+
+| **…**   |                            |                        |                  |         |         |           |
++---------+----------------------------+------------------------+------------------+---------+---------+-----------+

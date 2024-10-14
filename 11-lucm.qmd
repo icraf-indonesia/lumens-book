@@ -90,8 +90,7 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
 
 4.  **Set Repetition Number**:
 
-    -   Enter the *number of iterations* for the simulation in the *"Repetition"* field.
-        This value determines how many iterations the model will run to generate reliable projections.
+    -   Enter the *number of iterations* for the simulation in the *"Repetition"* field. This value determines how many iterations the model will run to generate reliable projections.
 
 ### Step 4: Running the Simulation
 
@@ -121,11 +120,12 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
 
 ### 3.1 Input Data & Parameters
 
-| No  | Data Name                    | Type               | Format  | Projection Requirements | Description                                          |         |     |     |
-|------------|------------|------------|------------|------------|------------|------------|------------|------------|
-| 1\. | Land Use/ Cover Map (Time 1) | Categorical raster | GeoTIFF | UTM                     | A map classifying land use types for the start year. |         |     |     |
-| 2\. | Land Use/ Cover Map (Time 2) | Categorical raster | GeoTIFF | UTM                     | A map classifying land use types for the end year.   |         |     |     |
-| 3   | Planning units               | Categorical raster | GeoTIFF | UTM                     | Categorical raster                                   | GeoTIFF | UTM | ... |
+
+| No | Data Name | Type | Format | Projection Requirements | Description |   |   |   |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| 1\. | Land Use/ Cover Map (Time 1) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the start year. |  |  |  |
+| 2\. | Land Use/ Cover Map (Time 2) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the end year. |  |  |  |
+| 3 | Planning units | Categorical raster | GeoTIFF | UTM | Categorical raster | GeoTIFF | UTM | ... |
 
 \[Include rows for ALL required input data and parameters.\]
 
@@ -142,12 +142,12 @@ Example: - *Land cover maps can often be obtained from \[link to data source\].*
 
 ### 4.1 Output Files
 
-| File Name                          | Type   | Description                                                                      |
+| File Name | Type | Description |
 |------------------------|------------------------|------------------------|
-| `land_use_change_map_[SUFFIX].tif` | Raster | Map depicting changes in land use between the specified time periods.            |
-| `transition_matrix_[SUFFIX].csv`   | CSV    | Table showing the area of land that transitioned between each land use category. |
-| `report_[SUFFIX].html`             | HTML   | A report summarizing the analysis results with visualizations and tables.        |
-| ...                                | ...    | ...                                                                              |
+| `land_use_change_map_[SUFFIX].tif` | Raster | Map depicting changes in land use between the specified time periods. |
+| `transition_matrix_[SUFFIX].csv` | CSV | Table showing the area of land that transitioned between each land use category. |
+| `report_[SUFFIX].html` | HTML | A report summarizing the analysis results with visualizations and tables. |
+| ... | ... | ... |
 
 \[Include rows for ALL output files, including the report.\]
 

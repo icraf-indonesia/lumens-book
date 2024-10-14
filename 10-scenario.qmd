@@ -1,7 +1,7 @@
-# Scenario Builder {#sec-scenario}
+# Scenario Builder {#sec-scenario .unnumbered}
 
 ---
-title: "[Scenario Builder]"
+title: "Scenario Builder"
 editor: 
   markdown: 
     wrap: sentence

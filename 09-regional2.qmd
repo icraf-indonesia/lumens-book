@@ -1,18 +1,15 @@
 # Regional Economic Projection {#sec-regeco2 .unnumbered}
 
----
-title: "[Regional Economic Projection]"
----
 
 ## 1. Description
 
-\[The **Regional Economic Projection Analysis** module in LUMENS analyse the economic dynamics of a region, providing insights into comparative economic outcomes between the BAU (Business-As-Usual) and alternative scenarios. By analyzing land requirements and scenario data, this module assists policymakers in comparing different development pathways for sustainable land use, improving livelihoods, and optimizing land-use policies.\]
+The **Regional Economic Projection Analysis** module in LUMENS analyse the economic dynamics of a region, providing insights into comparative economic outcomes between the BAU (Business-As-Usual) and alternative scenarios. By analyzing land requirements and scenario data, this module assists policymakers in comparing different development pathways for sustainable land use, improving livelihoods, and optimizing land-use policies.
 
 ## 2. Usage
 
 ### 2.1 Workflow
 
-\[This module processes input of the land requirement data and alternative scenario for the region of interest. Once the data are set, the module processes the input data, analyzing the comparison of BAU and scenario results in **GDP, Output, Income and Labour**\]
+This module processes input of the land requirement data and alternative scenario for the region of interest. Once the data are set, the module processes the input data, analyzing the comparison of BAU and scenario results in **GDP, Output, Income and Labour**
 
 ![](images/clipboard-3493049438.png)
 
@@ -36,13 +33,13 @@ In this step, you'll upload two data sets required for analysis: Land Requiremen
 
 **Step 2: Running the Analysis**
 
-\[Once all data is uploaded, run the analysis. Results will appear in the "Results" tab.\]
+Once all data is uploaded, run the analysis. Results will appear in the "Results" tab.
 
 ![](images/clipboard-3766518479.png)
 
 ### 2.3 Tips
 
--   *\[For large datasets, the analysis may take some time to complete. Ensure that all input maps have the same extent and resolution.* \]
+-   *For large datasets, the analysis may take some time to complete. Ensure that all input maps have the same extent and resolution.* 
 
 ## 3. Data Requirements
 
@@ -53,17 +50,17 @@ In this step, you'll upload two data sets required for analysis: Land Requiremen
 | 1\. | Land Requirement Database | Vector    | R data | N/A                     | Structured data that provides detailed information on the amount and types of land needed to support various economic activities, sectors, or development scenarios. |
 | 2\. | Sciendo Database          | Numerical | CSV    | N/A                     | Simulation output for alternative scenario.                                                                                                                          |
 
-\[Include rows for ALL required input data and parameters.\]
+Include rows for ALL required input data and parameters.
 
 ### 3.2 Example Datasets
 
-\[Example data sets can be accessed in [link]{.underline}.\]
+Example data sets can be accessed in [link]{.underline}.
 
 ![](images/clipboard-3839316557.png)
 
 ### 3.3 Data Acquisition
 
-\[Provide guidance on finding suitable data, linking to common sources if applicable. Example: - *Land cover maps can often be obtained from \[link to data source\].* - *For creating your own land cover maps from satellite imagery, consider using software such as \[link to software\].*\]
+Provide guidance on finding suitable data, linking to common sources if applicable. Example: - *Land cover maps can often be obtained from link to data source.* - *For creating your own land cover maps from satellite imagery, consider using software such as link to software.*
 
 ## 4. Outputs
 
@@ -76,11 +73,11 @@ In this step, you'll upload two data sets required for analysis: Land Requiremen
 | `report_[SUFFIX].html`             | HTML   | A report summarizing the analysis results with visualizations and tables.        |
 | ...                                | ...    | ...                                                                              |
 
-\[Include rows for ALL output files, including the report.\]
+Include rows for ALL output files, including the report.
 
 ### 4.2 Report Interpretation
 
-\[This section will guide users on understanding and interpreting the content of the generated report, drawing insights from **GDP table per sector** and comparison graphs of **GDP, Output, Income,** and **Labour**.\]
+This section will guide users on understanding and interpreting the content of the generated report, drawing insights from **GDP table per sector** and comparison graphs of **GDP, Output, Income,** and **Labour**.
 
 ### 1. **GDP Table per Sector**
 
@@ -156,27 +153,27 @@ This graph provides insight into employment trends in both scenarios. Key interp
 
 ### 5.1 Model Description
 
-\[The **Regional Economic Projection** module compares the economic outcomes between the Business-as-Usual (BAU) scenario and an alternative (ALT) scenario, typically aimed at promoting sustainable land use and green economy initiatives. The module utilizes projection algorithms that estimate future economic indicators such as GDP, output, income, and labor, based on land use dynamics and sectoral activity. The model integrates both economic and environmental data to project the effects of land-use decisions and policy interventions.
+The **Regional Economic Projection** module compares the economic outcomes between the Business-as-Usual (BAU) scenario and an alternative (ALT) scenario, typically aimed at promoting sustainable land use and green economy initiatives. The module utilizes projection algorithms that estimate future economic indicators such as GDP, output, income, and labor, based on land use dynamics and sectoral activity. The model integrates both economic and environmental data to project the effects of land-use decisions and policy interventions.
 
 -   **Scenario Inputs**: Each scenario (BAU vs. ALT) is defined by different assumptions regarding land use, resource management, and policy measures. These inputs are processed to forecast economic outcomes over a specific time horizon.
 
--   **Economic Projections**: The module assesses sectoral performance by estimating indicators such as GDP, output, income, and labor for each sector. A comparative analysis highlights the impact of sustainable policies versus a continuation of current practices (BAU).\]
+-   **Economic Projections**: The module assesses sectoral performance by estimating indicators such as GDP, output, income, and labor for each sector. A comparative analysis highlights the impact of sustainable policies versus a continuation of current practices (BAU).
 
 ### 5.2 Key Assumptions
 
-\[Key assumptions in the model are as follows:
+Key assumptions in the model are as follows:
 
 -   *The model assumes that the land-use and economic sector data (such as current land cover, resource availability, and sector productivity) accurately represent real-world conditions.*
 
--   *The model assumes that land-use changes occur in a relatively linear fashion across the analysis period. Major shocks or nonlinear shifts in land use, such as natural disasters or rapid technological advancements, may not be captured fully.*\]
+-   *The model assumes that land-use changes occur in a relatively linear fashion across the analysis period. Major shocks or nonlinear shifts in land use, such as natural disasters or rapid technological advancements, may not be captured fully.*
 
 ### 5.3 Limitations
 
-\[The module limitations and potential sources of error/uncertainty are as follows:
+The module limitations and potential sources of error/uncertainty are as follows:
 
 -   *The accuracy of projections is highly dependent on the quality of input data, particularly land-use maps and sectoral economic data. Inconsistent or outdated data could result in unreliable or skewed outcomes. High-resolution and up-to-date land-use maps are critical for precise scenario analysis.*
--   *The model simplifies land-use dynamics and may not account for gradual or complex changes within land-use categories.* \]
+-   *The model simplifies land-use dynamics and may not account for gradual or complex changes within land-use categories.* 
 
 ## References
 
-\[\@article{dewi2023integrating, title={Integrating relational and instrumental values of nature in planning land use for multiple ecosystem services (LUMENS): tools and process}, author={Dewi, Sonya and Mulia, Rachmat and Johana, Feri and Ekadinata, Andree and van Noordwijk, Meine}, journal={Current Opinion in Environmental Sustainability}, volume={64}, pages={101333}, year={2023}, publisher={Elsevier} }\]
+\@article{dewi2023integrating, title={Integrating relational and instrumental values of nature in planning land use for multiple ecosystem services (LUMENS): tools and process}, author={Dewi, Sonya and Mulia, Rachmat and Johana, Feri and Ekadinata, Andree and van Noordwijk, Meine}, journal={Current Opinion in Environmental Sustainability}, volume={64}, pages={101333}, year={2023}, publisher={Elsevier} }
