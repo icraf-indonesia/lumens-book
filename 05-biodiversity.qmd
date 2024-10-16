@@ -27,25 +27,37 @@ The workflow for this module can be divided into four key steps.
 Before using the QuES-B Analysis tool, prepare the following:
 
 1.  **Land Cover Map**: A raster file of current land use/land cover (LULC) in GeoTIFF format.
-2.  **Land Use/Cover & Focal Area Lookup Table**: A CSV file describing raster values with their corresponding land cover classes. Users define focal areas by selecting specific land cover classes.
-3.  **Edge Contrast Table**: An FSQ file defining edge contrast between land cover types.
-4.  (Optional) FRAGSTATS Configuration file.
+2.  **Land Use/Cover & Focal Area Look-up Table**: A CSV file describing raster values with their corresponding land cover classes. Users define focal areas by selecting specific land cover classes. An example of a focal area look up table used in this module can be seen below.
+
+|           |                            |               |                   |
+|-----------|----------------------------|---------------|-------------------|
+| **Value** | **Class**                  | **FocalArea** | **color_palette** |
+| 1         | Primary Forest             | 1             | #005500           |
+| 2         | High-density logged forest | 0             | #009933           |
+| 3         | Low-density logged forest  | 0             | #999900           |
+| 4         | Primary Swamp Forest       | 0             | #663300           |
+| 5         | Logged over swamp Forest   | 0             | #996600           |
+| 10        | Rubber agroforestry        | 0             | #d86b00           |
+| ....      |                            |               |                   |
+
+1.  **Edge Contrast Table**: An FSQ file defining edge contrast between land cover types.
+2.  (Optional) FRAGSTATS Configuration file.
 
 **Step 2: Uploading Data**
 
 Input your data into the left-hand side of the module by selecting the ‘Browse’ button for each data or drag your file from your computer into the data input box. Ensure that you upload the correct data input for each parameter. A blue bar with ‘Upload complete’ will appear once you have successfully input your data for each parameter.
 
-1.  Land cover: Click “Browse” and select your prepared land cover raster file. Ensure that the data is in GeoTIFF format with the relevant UTM projection system.
+1.  Choose your chosen mode of multiple time series analysis by clicking on the dot before Single Step or Two Step analysis. For single step, users will input only a single year, while two step will input data for two years. This help file will detail the steps for two step analysis.
 
-2.  Year: Enter the year of your land cover data (e.g., 2010). This must be numeric.
+2.  Land cover: Click “Browse” and select your prepared land cover raster file. Ensure that the data is in GeoTIFF format with the relevant UTM projection system.
 
-3.  No Data Class: Enter the value representing missing land cover data in your raster, e.g., cloud or shadow (default is 0).
+3.  Year: Enter the year of your land cover data (e.g., 2010). This must be numeric. For two step analysis, input the final year for this exercise.
 
-4.  Land Use/Cover & Focal Area Lookup Table: Click “Browse” and select your prepared CSV file.
+4.  No Data Class: Enter the value representing missing land cover data in your raster, e.g., cloud or shadow (default is 0).
 
-5.  Edge Contrast Table: Click “Browse” and select your prepared FSQ file.
+5.  Land Use/Cover & Focal Area Lookup Table: Click “Browse” and select your prepared CSV file.
 
-![](images/QuES-B/QuES-B-1.png)
+6.  Edge Contrast Table: Click “Browse” and select your prepared FSQ file.
 
 **Step 3: Setting Analysis Parameters**
 
@@ -82,7 +94,7 @@ Click on ‘Run QuES-B Analysis’ to initiate the analysis. A progress bar will
 ### Input Data & Parameters
 
 |  |  |  |  |  |  |
-|----|----|----|----|----|----|
+|------------|------------|------------|------------|------------|------------|
 | **No** | **Data Name** | **Type** | **Format** | **Projection Requirements** | **Description** |
 | 1\. | Land Cover Map | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the start year. |
 | 2\. | Landuse/cover and focal area look up table | Tabular | CSV |  | A CSV file describing raster values with their corresponding land cover classes. Users define focal areas by selecting specific land cover classes. |
@@ -100,19 +112,52 @@ Land cover maps can often be obtained from global or official national data. For
 
 ### Output Files
 
+| File Name | Type | Description |
+|-------------------|------------|----------------------------------------|
+| `Focal Area Map` | GeoTIFF | A binary raster map in GeoTIFF format derived from the land cover map, displaying the user-defined focal area classes represented as 1. |
+| TECI Map | GeoTIFF | A raster map in GeoTIFF format illustrating the spatial distribution of focal area fragmentation and integration across the landscape. It measures the contrast between adjacent land cover types. Lower TECI values indicate well-integrated areas with minimal contrast between adjacent land cover types. Conversely, higher TECI values represent more segregated areas with greater contrast between neighboring land uses. Gray areas represent areas outside the dispersal threshold from the focal area. |
+| Sampling grid | Shapefile | A polygon shapefile of sampling grids used to extract values of TECI and focal area size. |
+| DIFA Plot | Plot | A plot illustrating the Degree of Integration of Focal Area (DIFA) Index, which measures how well integrated the focal habitat is within the landscape. The x-axis represents the Total Edge Contrast Index (TECI), while the y-axis shows the cumulative proportion of focal area. The curve depicts the relationship between habitat fragmentation (TECI) and habitat amount. The area under this curve determines the DIFA score, ranging from 0 to 100%. Higher scores indicate better habitat integration. |
+| Ques-B Report | html | An overview of the analysis results in HTML format, providing detailed interpretations and visualizations of these outputs. |
+
 ### Report Interpretation
 
-After the analysis completes, you'll find the following in your selected output directory:
+After the analysis completes, your report will lead you to a html page with the following sections: Summary; Module brief description; Input data; and Results.
 
-1.  **Focal Area Map**: A binary raster map in GeoTIFF format derived from the land cover map, displaying the user-defined focal area classes represented as 1.
+**Section 1: Summary**
 
-2.  **TECI Map**: A raster map in GeoTIFF format illustrating the spatial distribution of focal area fragmentation and integration across the landscape. It measures the contrast between adjacent land cover types. Lower TECI values indicate well-integrated areas with minimal contrast between adjacent land cover types. Conversely, higher TECI values represent more segregated areas with greater contrast between neighboring land uses. Gray areas represent areas outside the dispersal threshold from the focal area.
+This section outlines basic information of the focal area and its estimated cover (in ha). The model summarizes the DIFA for the years of study.
 
-3.  **Sampling Grid**: A polygon shapefile of sampling grids used to extract values of TECI and focal area size.
+**Section 2: Module brief description**
 
-4.  **DIFA Plot**: A plot illustrating the Degree of Integration of Focal Area (DIFA) Index, which measures how well integrated the focal habitat is within the landscape. The x-axis represents the Total Edge Contrast Index (TECI), while the y-axis shows the cumulative proportion of focal area. The curve depicts the relationship between habitat fragmentation (TECI) and habitat amount. The area under this curve determines the DIFA score, ranging from 0 to 100%. Higher scores indicate better habitat integration.
+This section highlights important information on the scope of the module.
 
-5.  **QuES-B Report**: An overview of the analysis results in HTML format, providing detailed interpretations and visualizations of these outputs.
+**Section 3: Input data**
+
+This section displays all the input data for running the module, which includes the land use/cover map, land use/cover look up table, and edge contrast matrix.
+
+**Section 4: Results**
+
+1.  **Focal area map:** Focal area map illustrates the distribution of selected habitats of high biodiversity importance, that is Primary Forest (shown in dark green) within the landscape. The map is overlaid with a sampling grid where each cell represents an area of 100 hectares. The results for two step analysis also show focal area maps for year 1 and year 2.
+
+![](images/QuES-B/QuES-B-7.png)
+
+2.  **TECI Map:** TECI map illustrates the spatial distribution of Total Edge Contrast Index (TECI) values across the study area, representing Primary Forest fragmentation and integration within the landscape.
+    -   Lower TECI values, shown in darker blue colours, indicate well-integrated areas with minimal contrast between adjacent land cover types.
+    -   Higher TECI values, depicted gradually in green, yellow, and ultimately red, represent more segregated areas with greater contrast between neighbouring land uses.
+    -   The grey areas represent areas that are outside the dispersal radius of 1000 meters from the focal area.
+
+![](images/QuES-B/QuES-B-8.png)
+
+3.  **For two step analysis, users will find a TECI difference map** that calculates the spatial difference of TECI in years 1 and year 2. The map shows areas that are still fully intact, show a decrease and increase in TECI, and focal area loss.
+
+    ![](images/QuES-B/QuES-B-9.png)
+
+4.  **DIFA plot:** Here users will find DIFA plot (year 1 and year 2 for two step analysis). The x-axis represents the Total Edge Contrast Index (TECI), while the y-axis shows the cumulative proportion of focal area. The curve depicts the relationship between habitat fragmentation (TECI) and habitat amount. The area under this curve determines the DIFA score, ranging from 0 to 100%. Higher scores indicate better habitat integration.
+
+5.  For two step analysis, users will find a DIFA comparison plot which compares DIFA for year 1 and year 2 in one graph.
+
+    ![](images/QuES-B/QuES-B-10.png)
 
 ## Theoretical Background
 
