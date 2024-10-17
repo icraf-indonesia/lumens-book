@@ -13,6 +13,7 @@ editor:
 It incorporates variables such as elevation, proximity to roads, and other regional characteristics to predict land use dynamics.
 This module uses result from *Scenario Builder* by providing data-driven insights into how different factors influence land use over time.
 There are two parts: **Train Model and Simulate**.
+
 Policymakers can use this tool to explore the outcomes of various development, conservation, and land management strategies, enabling informed decisions to address challenges like deforestation and infrastructure development while balancing environmental sustainability and growth.\]
 
 ## 2. Usage
@@ -119,7 +120,6 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
 ## 3. Data Requirements
 
 ### 3.1 Input Data & Parameters
-
 
 | No | Data Name | Type | Format | Projection Requirements | Description |   |   |   |
 |--------|--------|--------|--------|--------|--------|--------|--------|--------|
