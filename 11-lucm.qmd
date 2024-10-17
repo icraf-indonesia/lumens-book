@@ -31,6 +31,8 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
 
 ### 2.2 Step-by-step instructions
 
+The first step is to run Sciendo Train.
+
 ### Step 1: Uploading Land Cover Data
 
 1.  **Upload Land Cover Map**: Click the *"Upload Raster"* button.
@@ -51,7 +53,7 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
         Your land-use matrix file should include the following details.
 
     |  |  |  |  |  |
-    |-------|---------------|--------|-----------------|--------------|
+    |-------|------------------------|--------|-----------------|--------------|
     | ID | LC | ID_Traj | Trajectory | color_palette |
     | 1 | Hutan Primer | 1 | Undisturbed forest | #005500 |
     | 2 | Hutan bekas tebangan kerapatan tinggi | 2 | Logged-over forest | #009933 |
@@ -71,116 +73,134 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
 ### Step 2: Training the Model
 
 1.  Click the *"Run Analysis"* button.
+    The system will process the inputs, using the land cover map, year, and land use matrix to identify land use transitions.
 
-2.  The system will process the inputs, using the land cover map, year, and land use matrix to identify land use transitions.
+2.  A progress bar will indicate the training status.
+    Once complete, the results will be saved and available for use in the next step.
+    Detailed results can be accessed in the *"Output Directory".*
 
-3.  A progress bar will indicate the training status.
+Upon completing Sciendo Train, use the results to run Sciendo Simulate.
 
-4.  Once complete, the results will be saved and available for use in the next step.
+### Step 3: Simulating the Model
 
-    *(Screenshot )*
+1.  Input data.
+    Users will need to upload land cover map initial, planning unit, land use/cover look up table and raster cube (results from Sciendo Train) by clicking on Browse for each data input.
+    Once uploaded, click open and ensure that the file has successfully been uploaded.
 
-### Step 3: Simulating Future Scenarios
+![](images/Sciendo Train/Simulate1.png)
 
-1.  **Navigate to the "Simulate" Tab**:
+2.  Input the number of repetitions you wish the model projects. For instance, in the example data we used data from 2005 to 2010 (5-year period). With this baseline, we can create projection repetitions per 5-year periods, respectively. In this example, for n number of repetitions, we can make n folds of 5-year periods. For projections until 2045, there are 7 repetitions. Projection repetitions uses the year gaps between T1 and T2 for its reps.
 
-    -   Once training is complete, click on the *"Simulate"* tab.
+3.  Insert the transition matrix folder. Select the folder that contains data from Sciendo Train in the form of CSV.
 
-2.  **Input QUES-C Table**:
+    ![](images/Sciendo Train/Simulate2.png)
 
-    -   Upload the *QUES-C* table, which contains the parameters needed for future simulations.
+4.  Input the folder path containing the weight of evidence results from Sciendo Train (in DCF format).
 
-3.  **Select Trained Model**:
+    ![](images/Sciendo Train/Simulate3.png)
 
-    -   From the dropdown menu, select the previously trained model as the input for simulation.
+5.  Select the output directory you wish to save your results. The chosen path will be shown in the bar below it.
 
-4.  **Set Repetition Number**:
-
-    -   Enter the *number of iterations* for the simulation in the *"Repetition"* field. This value determines how many iterations the model will run to generate reliable projections.
-
-### Step 4: Running the Simulation
-
-1.  **Run Simulation**:
-
-    -   Click the *"Run Analysis"* button to start the process.
-
-    -   A progress bar will appear, indicating the simulation's status.
-
-    -   Once complete, the results, will be displayed in the *"Output Directory".*
-
-### Step 5: Analyzing Results
-
-1.  **View Results**:
-
-    -   Navigate to the *"Results"* tab to view simulated land use maps and detailed statistical outputs.
-
-    -   Use the analysis outputs to interpret future land use patterns and their potential impacts.
+6.  Finalise the model by clicking on 'Run Analysis'.
 
 ### 2.3 Tips
 
--   \[Provide helpful hints or things to consider while using the module. Example:
-    -   *For large datasets, the analysis may take some time to complete.*
-    -   *Ensure that all input maps have the same extent and resolution.* \]
+-   For large data sets, the analysis may take some time to complete.
+-   Ensure that all input maps have the same extent and resolution.
 
 ## 3. Data Requirements
 
 ### 3.1 Input Data & Parameters
 
-| No | Data Name | Type | Format | Projection Requirements | Description |   |   |   |
-|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 1\. | Land Use/ Cover Map (Time 1) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the start year. |  |  |  |
-| 2\. | Land Use/ Cover Map (Time 2) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the end year. |  |  |  |
-| 3 | Planning units | Categorical raster | GeoTIFF | UTM | Categorical raster | GeoTIFF | UTM | ... |
+Input data for Sciendo Train is as follows.
 
-\[Include rows for ALL required input data and parameters.\]
+| No | Data Name | Type | Format | Projection Requirements | Description |
+|-----|--------------|---------|---------|--------------|---------------------|
+| 1\. | Land Use/ Cover Map (Time 1) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the start year. |
+| 2\. | Land Use/ Cover Map (Time 2) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the end year. |
+| 3 | Planning units | Categorical raster | GeoTIFF | UTM | Categorical raster |
+
+Results from Sciendo Train along with the following data are used for running Sciendo Simulate.
+
+| No | Data Name | Type | Format | Projection Requirements | Description |
+|-----|--------------|---------|---------|--------------|---------------------|
+| 1\. | Land Use/ Cover Map (Time 1) | Categorical raster | GeoTIFF | UTM | A map classifying land use types for the start year. |
+| 2\. | Planning unit | Categorical raster | GeoTIFF | UTM | A map of planning units over the study area. |
+| 3\. | Land use/cover look up table | Table | CSV |  | A table of the planning units used in the study. |
+| 4\. | Raster cube | Raster | ERS |  | Raster cube results from Sciendo Train |
+| 5\. | Transition matrix | Table | CSV |  | Table of transition rates for all land use transitions |
+| 6\. | Weight of evidence | Table | CSV |  | Weight of evidence results from Sciendo Train for all planning units |
 
 ### 3.2 Example Datasets
 
-\[Provide links to sample datasets users can download and use for practice.\]
+Data sets used in this helpfile can be accessed at **agroforestri.id/lumens-sciendo-trainsimulate**
 
 ### 3.3 Data Acquisition
-
-\[Provide guidance on finding suitable data, linking to common sources if applicable.
-Example: - *Land cover maps can often be obtained from \[link to data source\].* - *For creating your own land cover maps from satellite imagery, consider using software such as \[link to software\].*\]
 
 ## 4. Outputs
 
 ### 4.1 Output Files
 
-| File Name | Type | Description |
-|------------------------|------------------------|------------------------|
-| `land_use_change_map_[SUFFIX].tif` | Raster | Map depicting changes in land use between the specified time periods. |
-| `transition_matrix_[SUFFIX].csv` | CSV | Table showing the area of land that transitioned between each land use category. |
-| `report_[SUFFIX].html` | HTML | A report summarizing the analysis results with visualizations and tables. |
-| ... | ... | ... |
+**Sciendo Train**
 
-\[Include rows for ALL output files, including the report.\]
+| File Name | Type | Description |
+|------------------------|-------------|----------------------------------|
+| sciendo_train_raster_cube | Raster | Map depicting changes in land use between the specified time periods. |
+| `sciendo_factor` | CSV | Table showing the area of land that transitioned between each land use category. |
+| `weight_report[suffix]` | CSV and DCF | Table showing the weight coefficients of land-use changes for each planning unit. |
+| `report_[SUFFIX].html` | HTML | A report summarizing the analysis results with visualizations and tables. |
+| zone | TIFF | Map of planning zones used in the analysis. |
+
+**Sciendo Simulate**
+
+| File Name | Type | Description |
+|------------------------|-------------|----------------------------------|
+| `sciendo_simulation` | EGOML File |  |
+| `luc_projection` | CSV | Table showing the projected area for all land use types for n-repetitions. |
+| `landscape[suffix]` | GeoTIFF | Maps of the study area for years n. |
+| `sciendo_report` | html | A report summarizing the analysis results with visualisations and tables. |
 
 ### 4.2 Report Interpretation
 
-\[This section will guide users on understanding the content of the generated report.\] \[Provide specific examples of how to interpret findings from the report, addressing real-world planning concerns.
-Example: - *If the report shows a significant increase in deforestation within a protected area, policymakers could use this information to investigate the causes and strengthen enforcement efforts.* - *The transition matrix can help identify which land use types are most prone to conversion, allowing planners to target those areas with conservation or sustainable management practices.*\]
+#### **Sciendo Train**
+
+The module report for Sciendo Train consists of 4 main sections, namely Summary, Module brief description, Input data, and Results.
+
+The results section presents the main information presented through this analysis, namely the weight of evidence report.
+This section displays the weights transition coefficients for all planning units.
+
+![](images/Sciendo Train/Train-2.png)
+
+Here in the example data, there are 8 planning unit classes.
+From the example above, we can see that for planning unit class *Hutan Lindung* or Protected Forest there are 3 main land use transitions with significant transitions and highest weight coefficients, namely land use class 1 to 10, 1 to 16 and 16 to 19 with weight coefficients 6.5, 5.5, and 5.04 respectively.
+Each land use class transition has particular variables that most contribute to its transition, which in the example is indicated by variables elevation and distance to road.
+Additionally, users can also note the range of areas which the transition occurs as shown in the coloumn range.
+
+For detailed information on the land use transitions weights, see the weights files in CSV found in your output directory.
+
+#### Simulate
 
 ## 5. Theoretical Background
 
 ### 5.1 Model Description
 
-\[Explain the underlying model or algorithm conceptually, using diagrams or flowcharts.
-Avoid code.
-Example: - *This module uses a simple change detection method to identify pixels that have changed land use category between the input maps.* - *(Include a diagram showing how change detection works)*\]
+Land use projection analysis is conducted by calculating the spatial dynamic transition possibilities of a given time period with the application of a logistic regression.
+By looking into transition possibilities, indicated by the results from Sciendo Train, the model produces input for land use projections in the form of transition weights.
+These weights form possible rules or spatial patterns that help predict and project land use changes for a given planning unit.
 
 ### 5.2 Key Assumptions
 
--   \[List the key assumptions made by the model. Example:
-    -   *The land cover maps accurately represent land use categories.*
-    -   *Land use changes occur linearly over the analysis period.*\]
+-   The land cover maps accurately represent land use categories.
+-   Land use changes occur linearly over the analysis period.
 
 ### 5.3 Limitations
 
--   \[Explain the model's limitations and potential sources of error/uncertainty. Example:
-    -   *This module does not account for gradual land use changes or changes that occur within a single land use category.*
-    -   *Accuracy is limited by the quality and resolution of the input land cover maps.*\]
+-   This module does not account for gradual land use changes or changes that occur within a single land use category.
+-   Accuracy is limited by the quality and resolution of the input land cover maps.
 
 ## References
 
-\[Use BibTeX to cite relevant scientific literature.\]
+Soares-Filho, Britaldo Silveira, Gustavo Coutinho Cerqueira, and CássioLopes Pennachin.
+2002.
+“Dinamicaa Stochastic Cellular AutomataModel Designed to Simulate the Landscape Dynamics in an AmazonianColonization Frontier.” *Ecological Modelling* 154 (3):217–35.
+<https://doi.org/10.1016/s0304-3800(02)00059-5>.
