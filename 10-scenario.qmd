@@ -9,25 +9,25 @@ editor:
 
 ## 1. Description
 
-\[The **Scenario Builder** module within LUMENS allows policymakers or planners to simulate and analyze potential future land use and cover changes based on different scenarios.
+The **Scenario Builder** module within LUMENS allows policymakers or planners to simulate and analyze potential future land use and cover changes based on different scenarios.
 The module specifically provides information on net emission offsets (CO2eq) by comparing baseline emissions with scenario projections.
 This allows policymakers to assess the effectiveness of different strategies in reducing greenhouse gas emissions and achieving climate goals.
 
 Policymakers face challenges such as balancing economic development with environmental conservation, mitigating climate change impacts, and ensuring food security; with development pressures continuing to reduce the availability of productive land.
-The Scenario Builder module supports decision-making by analyzing historical trends, forecasting outcomes under different land-use policies, and providing net emission offset data.\]
+The Scenario Builder module supports decision-making by analyzing historical trends, forecasting outcomes under different land-use policies, and providing net emission offset data.
 
 ## 2. Usage
 
 ### 2.1 Workflow
 
-\[Users start by uploading the QUES-C database, which includes essential data such as planning units, the corresponding year, area (in hectares), and the matrix of land use change.
+Users start by uploading the QUES-C database, which includes essential data such as planning units, the corresponding year, area (in hectares), and the matrix of land use change.
 Then, select or define various scenarios based on development policy, conservation efforts, economic development strategies, or plans.
 The module processes the input data and selected parameters to simulate land use and cover changes over time.
-It generates comprehensive maps and statistics that detail **land use changes across different planning units**, along with **net emission offsets (CO2eq) under different scenarios**.\]
+It generates comprehensive maps and statistics that detail **land use changes across different planning units**, along with **net emission offsets (CO2eq) under different scenarios**.
 
 ![](images/clipboard-2086355284.png)
 
-### 2.2 Step-by-step instructions  Step 1: Uploading QUES-C Database
+### 2.2 Step-by-step instructions Step 1: Uploading QUES-C Database
 
 ![](images/clipboard-1144000349.png)
 
@@ -49,31 +49,27 @@ It generates comprehensive maps and statistics that detail **land use changes ac
 
     ![](images/clipboard-2265522022.png)
 
-4.  Click **"Run" Button.**
-
-    ![](images/clipboard-506558292.png)
+4.  Once the directory has been selected, click on the tab **'Projection'** on the top menu panel.
 
 #### Step 2: Select and Define Scenario
 
-1.  **Navigate to the "Scenario" Tab**:
+1.  **Navigate to the "Projection" Tab**:
 
-    -   After running the analysis, the **"Scenario"** tab will be open.
-        Users cam begin defining the specific land use change scenarios for analysis.
+    -   Users can begin defining the specific land use change scenarios for analysis.
         Select the period by clicking the horizontal year axis on the area chart.
         In this exercise, we will use 2010-2015.
+        Users can define the name of the scenario by clicking on 'Description' located inside the 'Scenario details' box on the right hand side of the screen.
+        For instance Scenario 1 and change it to Baseline Scenario as reference.
 
         ![](images/clipboard-3350087749.png)
 
 2.  **Baseline Scenario**:
 
-    -   Baseline scenario represents the current land use conditions and will be used as the reference for comparing future changes.
-        Users can select scenario.
-        For instance Scenario 1 and change it to Baseline Scenario as reference.
-        We can see that under baseline scenario, some areas in primary forest (hutan primer) converted to other land uses, including rubber and oil palm.
+    -   Baseline scenario represents the current land use conditions and will be used as the reference for comparing future changes. We can see that under baseline scenario, some areas in primary forest (hutan primer) converted to other land uses, including rubber and oil palm. For instance, in the example below, it is shown that areas labelled as primary forest consists of only 70,24% actual primary forest, while the rest have been converted into 21,78% high density logged forest (hutan bekas tebangan kerapatan tinggi), 3,54% oil palm, 2,69% low density logged forest, and the rest include monoculture rubber, and rubber and cinnamon agroforestry.
 
     ![](images/clipboard-1808965513.png)
 
-    Under the baseline scenario, the largest projected areas are oil palm, followed by monoculture rubber.
+    Under the baseline scenario, indicated above for areas labelled primary forest, areas with the largest projected areas are oil palm, followed by monoculture rubber.
     This will contribute to an increase of net emission which is about 70 million tCO2-eq.
 
     ![](images/clipboard-3280523999.png)
@@ -82,7 +78,7 @@ It generates comprehensive maps and statistics that detail **land use changes ac
 
     -   Add and describe the different land use change scenarios based on alternative policy interventions or development trajectories.
         Each scenario should outline changes in land use such as deforestation, agricultural expansion, or conservation efforts.
-        Example of set scenarios ar as follows:
+        Example of set scenarios are as follows:
 
         *a. ambitious scenario*
 
@@ -135,10 +131,11 @@ It generates comprehensive maps and statistics that detail **land use changes ac
 
         It means that in between 2010-2015, changes of projected area has contributed to the net emission offset for about -36.8 per cent.
         The resume box shows below that it reduce almost half of the baseline by implementing the ambitious scenario.
+        Users may hover over the graph to see detailed net emission offsets of the baseline and alternative scenario.
 
-    5.  **Download Parameters and REDD Abacus Data**:
+    5.  **Run Analysis, and Download Parameters and REDD Abacus Data**:
 
-    -   Once scenarios are defined, users can download the selected parameters and **REDD+ Abacus** data for further analysis or reporting purposes.
+    -   Once scenarios are defined, click on 'Run Analysis'. Users can then download the selected parameters and **REDD+ Abacus** data for further analysis or reporting purposes.
 
 #### Step 3: **Compare and Interpret Results**:
 
@@ -154,9 +151,9 @@ The detailed outputs help assess impacts and guide decision-making.
 
 ### 3.1 Input Data & Parameters
 
-| No  | Data Name       | Type                   | Format | Projection Requirements | Description                                                                      |
+| No | Data Name | Type | Format | Projection Requirements | Description |
 |------------|------------|------------|------------|------------|------------|
-| 1\. | QUES-C Database | Categorical, numerical | CSV    | N/A                     | Planning unite, land use change matrix, carbon values (CO2eq) per land use type. |
+| 1\. | QUES-C Database | Categorical, numerical | CSV | N/A | Planning unite, land use change matrix, carbon values (CO2eq) per land use type. |
 
 ### 3.2 Example Datasets
 
@@ -166,17 +163,14 @@ The detailed outputs help assess impacts and guide decision-making.
 
 ### 3.3 Data Acquisition
 
-\[Provide guidance on finding suitable data, linking to common sources if applicable.
-Example: - *Land cover maps can often be obtained from \[link to data source\].* - *For creating your own land cover maps from satellite imagery, consider using software such as \[link to software\].*\]
-
 ## 4. Outputs
 
 ### 4.1 Output Files
 
-| File Name                        | Type | Description                                                                      |
+| File Name | Type | Description |
 |------------------------|------------------------|------------------------|
-| `transition_matrix_[SUFFIX].csv` | CSV  | Table showing the area of land that transitioned between each land use category. |
-| `report_[SUFFIX].html`           | HTML | A report summarizing the analysis results with visualizations and tables.        |
+| `transition_matrix_[SUFFIX].csv` | CSV | Table showing the area of land that transitioned between each land use category. |
+| `report_[SUFFIX].html` | HTML | A report summarizing the analysis results with visualizations and tables. |
 
 ### 4.2 Report Interpretation
 
@@ -199,7 +193,7 @@ The underlying approach is a **change detection method**, where changes between 
 The module evaluates the extent of land conversion (e.g., from forest to plantation or settlement) and calculates the corresponding **net emissions offset (CO2-eq)**.
 
 The model generates results by integrating the land cover maps with defined planning units and linking the observed land use changes to emissions calculations.
-By simulating different scenarios (ambitious, moderate, and conservative), the module helps users compare alternative development strategies and their respective impacts on deforestation, forest cover, and agroforestry adoption.\]
+By simulating different scenarios (ambitious, moderate, and conservative), the module helps users compare alternative development strategies and their respective impacts on deforestation, forest cover, and agroforestry adoption.
 
 ### 5.2 Key Assumptions
 
