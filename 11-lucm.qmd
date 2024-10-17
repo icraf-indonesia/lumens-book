@@ -9,22 +9,22 @@ editor:
 
 ## 1. Description
 
-\[The *Land Use Change Modelling using Dinamica* module in LUMENS simulates future land use/cover changes using a time and space model.
+The *Land Use Change Modelling using Dinamica* module in LUMENS simulates future land use/cover changes using a time and space model.
 It incorporates variables such as elevation, proximity to roads, and other regional characteristics to predict land use dynamics.
 This module uses result from *Scenario Builder* by providing data-driven insights into how different factors influence land use over time.
 There are two parts: **Train Model and Simulate**.
 
-Policymakers can use this tool to explore the outcomes of various development, conservation, and land management strategies, enabling informed decisions to address challenges like deforestation and infrastructure development while balancing environmental sustainability and growth.\]
+Policymakers can use this tool to explore the outcomes of various development, conservation, and land management strategies, enabling informed decisions to address challenges like deforestation and infrastructure development while balancing environmental sustainability and growth.
 
 ## 2. Usage
 
 ### 2.1 Workflow
 
-\[*Land Use Change Modelling using Dinamica* module in LUMENS begins with data preparation, where users upload land cover maps from different time periods, along with a look-up table that defines land cover classes and land use types.
+*Land Use Change Modelling using Dinamica* module in LUMENS begins with data preparation, where users upload land cover maps from different time periods, along with a look-up table that defines land cover classes and land use types.
 These inputs are critical for calibrating the model.
 Next, users select relevant spatial variables such as elevation, distance to roads, and slope, which influence land use changes in the region.
 The model then trains by overlaying historical land cover data and selected variables to detect patterns in land use change.
-Afterward, users configure future scenarios by adjusting variables*.* The module runs the simulation based on these inputs, generating predictive maps and statistical outputs that show potential future land use changes and emissions.*\]*
+Afterward, users configure future scenarios by adjusting variables*.* The module runs the simulation based on these inputs, generating predictive maps and statistical outputs that show potential future land use changes and emissions.
 
 *\
 *![](images/clipboard-1662994197.png)
@@ -33,33 +33,38 @@ Afterward, users configure future scenarios by adjusting variables*.* The module
 
 ### Step 1: Uploading Land Cover Data
 
-1.  **Upload Land Cover Map**:
+1.  **Upload Land Cover Map**: Click the *"Upload Raster"* button.
+    Select your land cover map (in GeoTIFF format) from your computer.
+    Once uploaded, confirm the map appears in the interface.
 
-    -   Click the *"Upload Raster"* button.
+2.  **Input Year:** Input the corresponding year for the land cover map in the *"Year"* field.
+    Once data for year 1 and year 2 have been uploaded, the input will look like this.
 
-    -   Select your land cover map (in GeoTIFF format) from your computer.
-
-    -   Once uploaded, confirm the map appears in the interface.
-
-        *(Screenshot )*
-
-2.  **Input Year**:
-
-    -   Input the corresponding year for the land cover map in the *"Year"* field.
+    ![](images/Sciendo Train/Train-1.png)
 
 3.  **Upload Land Use Matrix**:
 
     -   Click the *"Upload Land Use Matrix"* button.
 
     -   Select your land use matrix file, which defines transitions between land use categories.
+        Confirm the matrix is correctly loaded.
+        Your land-use matrix file should include the following details.
 
-    -   Confirm the matrix is correctly loaded.
+    |  |  |  |  |  |
+    |-------|---------------|--------|-----------------|--------------|
+    | ID | LC | ID_Traj | Trajectory | color_palette |
+    | 1 | Hutan Primer | 1 | Undisturbed forest | #005500 |
+    | 2 | Hutan bekas tebangan kerapatan tinggi | 2 | Logged-over forest | #009933 |
+    | 3 | Hutan bekas tebangan kerapatan rendah | 2 | Logged-over forest | #999900 |
+    | 4 | Hutan Rawa Primer | 1 | Undisturbed forest | #663300 |
+    | 5 | Hutan Rawa Sekunder | 2 | Logged-over forest | #996600 |
+    | 6 | Hutan Rawa Primer Gambut | 1 | Undisturbed forest | #999900 |
+    | 7 | Hutan Rawa Sekunder Gambut | 2 | Logged-over forest | #e68a00 |
+    | 8 | Hutan Mangrove Primer | 1 | Undisturbed forest | #80ffbf |
+    | ... |  |  |  |  |
 
-4.  **Upload Planning Unit**:
-
-    -   Click the *"Upload Planning Unit"* button.
-
-    -   Select your planning unit layer, which represents the spatial boundaries for analysis.
+4.  **Upload Planning Unit**: Click the *"Upload Planning Unit"* button.
+    Select your planning unit layer, which represents the spatial boundaries for analysis.
 
 5.  **Add Factor or Folder Path**
 
