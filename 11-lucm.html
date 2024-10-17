@@ -750,6 +750,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="simulate" class="level4">
 <h4 class="anchored" data-anchor-id="simulate">Simulate</h4>
+<p>The report for Sciendo Simulate is presented in 4 sections: Summary; Module brief description; Input data; and Results.</p>
+<p>Input data for this model is displayed first. This includes data input in the form of initial land use/cover map, planning unit and the respective land use/cover table.</p>
+<p><img src="images/Sciendo Train/Simulate4.png" class="img-fluid" width="495"></p>
+<p>Projected land use changes can be observed in the form of its spatial maps for projected years T1, T2, T3, etc as well as in tabular form. Policymakers can use this information to locate the extent of land use changes for a given target year as an implication of the chosen scenario (BAU or alternative).</p>
 </section>
 </section>
 </section>
@@ -1446,30 +1450,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Simulate</span></span>
 <span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Theoretical Background</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>The report for Sciendo Simulate is presented in 4 sections: Summary; Module brief description; Input data; and Results.</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5.1 Model Description</span></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>Land use projection analysis is conducted by calculating the spatial dynamic transition possibilities of a given time period with the application of a logistic regression.</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>By looking into transition possibilities, indicated by the results from Sciendo Train, the model produces input for land use projections in the form of transition weights.</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>These weights form possible rules or spatial patterns that help predict and project land use changes for a given planning unit.</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5.2 Key Assumptions</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>Input data for this model is displayed first.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>This includes data input in the form of initial land use/cover map, planning unit and the respective land use/cover table.</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/Sciendo Train/Simulate4.png)</span>{width="495"}</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>Projected land use changes can be observed in the form of its spatial maps for projected years T1, T2, T3, etc as well as in tabular form.</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>Policymakers can use this information to locate the extent of land use changes for a given target year as an implication of the chosen scenario (BAU or alternative).</span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>The land cover maps accurately represent land use categories.</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Land use changes occur linearly over the analysis period.</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5.3 Limitations</span></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>This module does not account for gradual land use changes or changes that occur within a single land use category.</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Accuracy is limited by the quality and resolution of the input land cover maps.</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Theoretical Background</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5.1 Model Description</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>Land use projection analysis is conducted by calculating the spatial dynamic transition possibilities of a given time period with the application of a logistic regression.</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>By looking into transition possibilities, indicated by the results from Sciendo Train, the model produces input for land use projections in the form of transition weights.</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>These weights form possible rules or spatial patterns that help predict and project land use changes for a given planning unit.</span>
 <span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5.2 Key Assumptions</span></span>
 <span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>Soares-Filho, Britaldo Silveira, Gustavo Coutinho Cerqueira, and CássioLopes Pennachin.</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>2002.</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>“Dinamicaa Stochastic Cellular AutomataModel Designed to Simulate the Landscape Dynamics in an AmazonianColonization Frontier.” *Ecological Modelling* 154 (3):217–35.</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://doi.org/10.1016/s0304-3800(02)00059-5&gt;</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>The land cover maps accurately represent land use categories.</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Land use changes occur linearly over the analysis period.</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5.3 Limitations</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>This module does not account for gradual land use changes or changes that occur within a single land use category.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Accuracy is limited by the quality and resolution of the input land cover maps.</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>Soares-Filho, Britaldo Silveira, Gustavo Coutinho Cerqueira, and CássioLopes Pennachin.</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>2002.</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>“Dinamicaa Stochastic Cellular AutomataModel Designed to Simulate the Landscape Dynamics in an AmazonianColonization Frontier.” *Ecological Modelling* 154 (3):217–35.</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://doi.org/10.1016/s0304-3800(02)00059-5&gt;</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
