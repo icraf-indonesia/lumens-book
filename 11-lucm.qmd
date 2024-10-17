@@ -180,6 +180,16 @@ For detailed information on the land use transitions weights, see the weights fi
 
 #### Simulate
 
+The report for Sciendo Simulate is presented in 4 sections: Summary; Module brief description; Input data; and Results.
+
+Input data for this model is displayed first.
+This includes data input in the form of initial land use/cover map, planning unit and the respective land use/cover table.
+
+![](images/Sciendo Train/Simulate4.png){width="495"}
+
+Projected land use changes can be observed in the form of its spatial maps for projected years T1, T2, T3, etc as well as in tabular form.
+Policymakers can use this information to locate the extent of land use changes for a given target year as an implication of the chosen scenario (BAU or alternative).
+
 ## 5. Theoretical Background
 
 ### 5.1 Model Description
