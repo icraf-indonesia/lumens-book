@@ -137,7 +137,7 @@ For creating your own land cover maps from satellite imagery, consider using sof
 ### Output Files
 
 |  |  |  |
-|---------------|---------------|------------------------------------------|
+|-----------------|-----------------|---------------------------------------|
 | **File Name** | **Type** | **Description** |
 | c_factor | TIF File | A map of crop management values |
 | soil_erosion | TIF File | A map of soil erosion susceptibility. |
@@ -273,7 +273,7 @@ Users will find estimation of soil erosion at landscape level and at the plannin
     Conversely, a lighter color suggests stronger soil erosion.
     For two step analysis, the module will generate maps for T1 and T2.
 
-    ![](images/clipboard-1339903909.png)
+    ![](images/QuES-H/QuesH-18.png)
 
     For a more detailed account of soil erosion per category, the soil erosion map distribution correlates with the subsequent table.
     Users will find and be able sort soil erosion rates by area and percentage.
@@ -281,15 +281,26 @@ Users will find estimation of soil erosion at landscape level and at the plannin
     As policymakers, the information on soil erosion at the landscape level suggests important insights on the severity of soil erosion, where it occurs, and trend.
     In particular, the information may be useful in identifying high risk areas, understand landscape variability, assert baseline data and foster collaboration in implementing soil conservation strategies.
 
-    ![](images/QuES-H/QuesH-20.png)
-
 2.  **Soil Erosion at Planning Unit Level**
 
     The following three tables present the crosstabulation of soil erosion categories for each planning unit in the study year(s).
     For instance, users will be able to identify and compare the total area of all soil erosion categories planning unit *Hutan Lindung* (ha), noting that planning unit *Perkebunan* and *Pertanian Lahan Basah* has a larger area with severe soil erosion risk, at 1.442 and 1.522 ha respectively in 2010.
-    For two step analysis, users are supplemented with a trajectory table of soil erosion changes from T1 to T2.
 
-Insights from these tables could provide valuable information for policymakers, for instance:
+3.  **Soil Erosion Changes (for two step analysis)**
+
+    In this section, soil erosion changes are presented.
+    Users can see areas where soil erosion potential between T1 and T2 have decreased, increased, and no changes are seen.
+    Detailed soil erosion changes table are displayed at the landscape and planning unit level.
+
+    ![](images/QuES-H/QuesH-20.png)
+
+## Theoretical Background
+
+### **Model Description**
+
+This module calculates soil erosion based on the Revised Universal Soil Loss Equation (RUSLE) equation: **A = R \* K \* LS \* C \* P.**
+
+Insights from the module could provide valuable information for policymakers, for instance:
 
 1.  **Identify priority areas for intervention.** With spatially explicit insights, policymakers will be able to identify high-risk areas for soil erosion mitigation and landscape restoration.
     Using the planning unit, land management policies may be able to focus on land uses that are more vulnerable to soil erosion.
@@ -298,14 +309,6 @@ Insights from these tables could provide valuable information for policymakers, 
     This allows for more specific strategies on increasing soil erosion resiliency.
 
 3.  **Identify trends over multiple periods of time.** Trajectory of soil erosion between T1 and T2 provides insight into the areas with no changes, decreasing and increasing risk of soil erosion.
-
-## Theoretical Background
-
-### **Model Description**
-
-This module calculates soil erosion based on the Revised Universal Soil Loss Equation (RUSLE) equation: **A = R \* K \* LS \* C \* P.**
-
-![](images/QuES-H/QuesH-21.png)
 
 ### **Key Assumptions**
 
