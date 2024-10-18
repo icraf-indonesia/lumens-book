@@ -554,9 +554,9 @@ div.csl-indent {
 <h3 data-number="6.4.1" class="anchored" data-anchor-id="output-files"><span class="header-section-number">6.4.1</span> Output Files</h3>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 58%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 53%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -665,18 +665,14 @@ div.csl-indent {
 <ol type="1">
 <li><p><strong>Soil Erosion at Landscape Level</strong></p>
 <p>Soil erosion results are categorized into six categories, namely Slight erosion (&lt;5 ton/ha/year), Mild (5-25 ton/ha/year), Moderate (25-50 ton/ha/year), Strong (50-80 ton/ha/year), Very Strong (80-150 ton/ha/year) and Severe (&gt;150 ton/ha/year). The darker the color on the map indicates a lighter estimation of soil erosion. Conversely, a lighter color suggests stronger soil erosion. For two step analysis, the module will generate maps for T1 and T2.</p>
-<p><img src="images/clipboard-1339903909.png" class="img-fluid"></p>
+<p><img src="images/QuES-H/QuesH-18.png" class="img-fluid"></p>
 <p>For a more detailed account of soil erosion per category, the soil erosion map distribution correlates with the subsequent table. Users will find and be able sort soil erosion rates by area and percentage.</p>
-<p>As policymakers, the information on soil erosion at the landscape level suggests important insights on the severity of soil erosion, where it occurs, and trend. In particular, the information may be useful in identifying high risk areas, understand landscape variability, assert baseline data and foster collaboration in implementing soil conservation strategies.</p>
-<p><img src="images/QuES-H/QuesH-20.png" class="img-fluid"></p></li>
+<p>As policymakers, the information on soil erosion at the landscape level suggests important insights on the severity of soil erosion, where it occurs, and trend. In particular, the information may be useful in identifying high risk areas, understand landscape variability, assert baseline data and foster collaboration in implementing soil conservation strategies.</p></li>
 <li><p><strong>Soil Erosion at Planning Unit Level</strong></p>
-<p>The following three tables present the crosstabulation of soil erosion categories for each planning unit in the study year(s). For instance, users will be able to identify and compare the total area of all soil erosion categories planning unit <em>Hutan Lindung</em> (ha), noting that planning unit <em>Perkebunan</em> and <em>Pertanian Lahan Basah</em> has a larger area with severe soil erosion risk, at 1.442 and 1.522 ha respectively in 2010. For two step analysis, users are supplemented with a trajectory table of soil erosion changes from T1 to T2.</p></li>
-</ol>
-<p>Insights from these tables could provide valuable information for policymakers, for instance:</p>
-<ol type="1">
-<li><p><strong>Identify priority areas for intervention.</strong> With spatially explicit insights, policymakers will be able to identify high-risk areas for soil erosion mitigation and landscape restoration. Using the planning unit, land management policies may be able to focus on land uses that are more vulnerable to soil erosion.</p></li>
-<li><p><strong>Identify spatial distribution of soil erosion risk factors.</strong> The module generates maps for each RUSLE factor, suggesting spatially explicit information on areas with lower or higher risk. This allows for more specific strategies on increasing soil erosion resiliency.</p></li>
-<li><p><strong>Identify trends over multiple periods of time.</strong> Trajectory of soil erosion between T1 and T2 provides insight into the areas with no changes, decreasing and increasing risk of soil erosion.</p></li>
+<p>The following three tables present the crosstabulation of soil erosion categories for each planning unit in the study year(s). For instance, users will be able to identify and compare the total area of all soil erosion categories planning unit <em>Hutan Lindung</em> (ha), noting that planning unit <em>Perkebunan</em> and <em>Pertanian Lahan Basah</em> has a larger area with severe soil erosion risk, at 1.442 and 1.522 ha respectively in 2010.</p></li>
+<li><p><strong>Soil Erosion Changes (for two step analysis)</strong></p>
+<p>In this section, soil erosion changes are presented. Users can see areas where soil erosion potential between T1 and T2 have decreased, increased, and no changes are seen. Detailed soil erosion changes table are displayed at the landscape and planning unit level.</p>
+<p><img src="images/QuES-H/QuesH-20.png" class="img-fluid"></p></li>
 </ol>
 </section>
 </section>
@@ -685,7 +681,12 @@ div.csl-indent {
 <section id="model-description" class="level3" data-number="6.5.1">
 <h3 data-number="6.5.1" class="anchored" data-anchor-id="model-description"><span class="header-section-number">6.5.1</span> <strong>Model Description</strong></h3>
 <p>This module calculates soil erosion based on the Revised Universal Soil Loss Equation (RUSLE) equation: <strong>A = R * K * LS * C * P.</strong></p>
-<p><img src="images/QuES-H/QuesH-21.png" class="img-fluid"></p>
+<p>Insights from the module could provide valuable information for policymakers, for instance:</p>
+<ol type="1">
+<li><p><strong>Identify priority areas for intervention.</strong> With spatially explicit insights, policymakers will be able to identify high-risk areas for soil erosion mitigation and landscape restoration. Using the planning unit, land management policies may be able to focus on land uses that are more vulnerable to soil erosion.</p></li>
+<li><p><strong>Identify spatial distribution of soil erosion risk factors.</strong> The module generates maps for each RUSLE factor, suggesting spatially explicit information on areas with lower or higher risk. This allows for more specific strategies on increasing soil erosion resiliency.</p></li>
+<li><p><strong>Identify trends over multiple periods of time.</strong> Trajectory of soil erosion between T1 and T2 provides insight into the areas with no changes, decreasing and increasing risk of soil erosion.</p></li>
+</ol>
 </section>
 <section id="key-assumptions" class="level3" data-number="6.5.2">
 <h3 data-number="6.5.2" class="anchored" data-anchor-id="key-assumptions"><span class="header-section-number">6.5.2</span> <strong>Key Assumptions</strong></h3>
@@ -1338,7 +1339,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="fu">### Output Files</span></span>
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>|  |  |  |</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>|---------------|---------------|------------------------------------------|</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>|-----------------|-----------------|---------------------------------------|</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>| **File Name** | **Type** | **Description** |</span>
 <span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>| c_factor | TIF File | A map of crop management values |</span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>| soil_erosion | TIF File | A map of soil erosion susceptibility. |</span>
@@ -1474,7 +1475,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>    Conversely, a lighter color suggests stronger soil erosion.</span>
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>    For two step analysis, the module will generate maps for T1 and T2.</span>
 <span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>    <span class="al">![](images/clipboard-1339903909.png)</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>    <span class="al">![](images/QuES-H/QuesH-18.png)</span></span>
 <span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>    For a more detailed account of soil erosion per category, the soil erosion map distribution correlates with the subsequent table.</span>
 <span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>    Users will find and be able sort soil erosion rates by area and percentage.</span>
@@ -1482,46 +1483,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>    As policymakers, the information on soil erosion at the landscape level suggests important insights on the severity of soil erosion, where it occurs, and trend.</span>
 <span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>    In particular, the information may be useful in identifying high risk areas, understand landscape variability, assert baseline data and foster collaboration in implementing soil conservation strategies.</span>
 <span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>    <span class="al">![](images/QuES-H/QuesH-20.png)</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Soil Erosion at Planning Unit Level**</span>
 <span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Soil Erosion at Planning Unit Level**</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>    The following three tables present the crosstabulation of soil erosion categories for each planning unit in the study year(s).</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>    For instance, users will be able to identify and compare the total area of all soil erosion categories planning unit *Hutan Lindung* (ha), noting that planning unit *Perkebunan* and *Pertanian Lahan Basah* has a larger area with severe soil erosion risk, at 1.442 and 1.522 ha respectively in 2010.</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>    For two step analysis, users are supplemented with a trajectory table of soil erosion changes from T1 to T2.</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>Insights from these tables could provide valuable information for policymakers, for instance:</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Identify priority areas for intervention.** With spatially explicit insights, policymakers will be able to identify high-risk areas for soil erosion mitigation and landscape restoration.</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>    Using the planning unit, land management policies may be able to focus on land uses that are more vulnerable to soil erosion.</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>    The following three tables present the crosstabulation of soil erosion categories for each planning unit in the study year(s).</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>    For instance, users will be able to identify and compare the total area of all soil erosion categories planning unit *Hutan Lindung* (ha), noting that planning unit *Perkebunan* and *Pertanian Lahan Basah* has a larger area with severe soil erosion risk, at 1.442 and 1.522 ha respectively in 2010.</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Soil Erosion Changes (for two step analysis)**</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>    In this section, soil erosion changes are presented.</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>    Users can see areas where soil erosion potential between T1 and T2 have decreased, increased, and no changes are seen.</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>    Detailed soil erosion changes table are displayed at the landscape and planning unit level.</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>    <span class="al">![](images/QuES-H/QuesH-20.png)</span></span>
 <span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Identify spatial distribution of soil erosion risk factors.** The module generates maps for each RUSLE factor, suggesting spatially explicit information on areas with lower or higher risk.</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>    This allows for more specific strategies on increasing soil erosion resiliency.</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Identify trends over multiple periods of time.** Trajectory of soil erosion between T1 and T2 provides insight into the areas with no changes, decreasing and increasing risk of soil erosion.</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical Background</span></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Model Description**</span></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>This module calculates soil erosion based on the Revised Universal Soil Loss Equation (RUSLE) equation: **A = R \* K \* LS \* C \* P.**</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical Background</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Model Description**</span></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>This module calculates soil erosion based on the Revised Universal Soil Loss Equation (RUSLE) equation: **A = R \* K \* LS \* C \* P.**</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>Insights from the module could provide valuable information for policymakers, for instance:</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Identify priority areas for intervention.** With spatially explicit insights, policymakers will be able to identify high-risk areas for soil erosion mitigation and landscape restoration.</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>    Using the planning unit, land management policies may be able to focus on land uses that are more vulnerable to soil erosion.</span>
 <span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/QuES-H/QuesH-21.png)</span></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Key Assumptions**</span></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>P factor in this module uses RUSLE factors preparation methods found here: <span class="ot">&lt;https://penerbit.brin.go.id/press/catalog/download/538/511/11585?inline=1&gt;</span> In this model, P factor is assumed 1.</span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>C factor is assumed to directly influenced by the vegetation type, stage of vegetation growth and percentage of vegetation cover.</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>    In currect script, we use this from Erencin et al. 2000; Panagos et al. 2015 <span class="co">[</span><span class="ot">(PDF) Spatial Estimation of Soil Erosion Using RUSLE Modeling: A case study of Dolakha District, Nepal (researchgate.net)</span><span class="co">](https://www.researchgate.net/publication/340816115_Spatial_Estimation_of_Soil_Erosion_Using_RUSLE_Modeling_A_case_study_of_Dolakha_District_Nepal)</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Identify spatial distribution of soil erosion risk factors.** The module generates maps for each RUSLE factor, suggesting spatially explicit information on areas with lower or higher risk.</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>    This allows for more specific strategies on increasing soil erosion resiliency.</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Identify trends over multiple periods of time.** Trajectory of soil erosion between T1 and T2 provides insight into the areas with no changes, decreasing and increasing risk of soil erosion.</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Key Assumptions**</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>P factor in this module uses RUSLE factors preparation methods found here: <span class="ot">&lt;https://penerbit.brin.go.id/press/catalog/download/538/511/11585?inline=1&gt;</span> In this model, P factor is assumed 1.</span>
 <span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Limitations**</span></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Accuracy is limited by the quality and resolution of the input maps.</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### **References**</span></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@tian2021</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>C factor is assumed to directly influenced by the vegetation type, stage of vegetation growth and percentage of vegetation cover.</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>    In currect script, we use this from Erencin et al. 2000; Panagos et al. 2015 <span class="co">[</span><span class="ot">(PDF) Spatial Estimation of Soil Erosion Using RUSLE Modeling: A case study of Dolakha District, Nepal (researchgate.net)</span><span class="co">](https://www.researchgate.net/publication/340816115_Spatial_Estimation_of_Soil_Erosion_Using_RUSLE_Modeling_A_case_study_of_Dolakha_District_Nepal)</span></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Limitations**</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Accuracy is limited by the quality and resolution of the input maps.</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### **References**</span></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@tian2021</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
