@@ -37,6 +37,8 @@ The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning 
 
 ### Model Description
 
+The PUR module helps identify the location and extent of various overlapping area designations. These results can then be used as a basis for more open and directed discussions in the process of updating planning units.
+
 ### Key Assumptions
 
 ### Limitations
