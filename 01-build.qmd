@@ -1,1 +1,44 @@
-# Building planning unit {#sec-build}
+# Planning Unit Reconciliation (Build) {#sec-profit}
+
+---
+title: "PUR Build"
+editor: Ira Ratna
+  markdown: 
+    wrap: sentence
+---
+
+## Description
+
+The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape. It helps the stakeholders to understand which area is overlapping and the size of the area.
+
+## Usage
+
+### Workflow
+
+### Step-bystep instructions
+
+### Tips
+
+## Data Requirements
+
+### Input Data and Parameters
+
+### Example Datasets
+
+### Data Acquistion
+
+## Outputs
+
+### Output Files
+
+### Report Interpretation
+
+## Theoritical Background
+
+### Model Description
+
+### Key Assumptions
+
+### Limitations
+
+## References
