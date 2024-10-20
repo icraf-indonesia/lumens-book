@@ -1,1 +1,43 @@
 # Planning unit reconciliation {#sec-reconcile}
+---
+title: "PUR Reconcile"
+editor: Ira Ratna
+  markdown: 
+    wrap: sentence
+---
+
+## Description
+
+## Usage
+
+### Workflow
+
+### Step-by step instructions
+
+### Tips
+
+## Data Requirements
+
+### Input Data and Parameters
+
+### Example Datasets
+
+### Data Acquistion
+
+## Outputs
+
+### Output Files
+
+### Report Interpretation
+
+## Theoretical Background
+
+### Model Description
+
+### Key Assumptions
+
+### Limitations
+
+## References
+
+[ @article{dewi2015negotiation, title={Negotiation support tools to enhance multifunctioning landscapes}, author={Dewi, Sonya and Ekadinata, Andree and Indiarto, Dony  and Nugraha, Alfa and van Noordwijk, Meine}, book={ Climate-Smart Landscapes: Multifunctionality in Practice }, pages={444}, year={2015}, publisher={ World Agroforestry Centre (ICRAF)} }]
