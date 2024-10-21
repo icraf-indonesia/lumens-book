@@ -1,11 +1,4 @@
-# Planning Unit Reconciliation (Build) {#sec-profit}
-
----
-title: "PUR Build"
-editor: Ira Ratna
-  markdown: 
-    wrap: sentence
----
+# Planning Unit Reconciliation (Build) {#sec-build}
 
 ## Description
 
@@ -108,7 +101,7 @@ The PUR unresolved case table can help identify which planning units overlap wit
 
 ![](images/PUR-Build/PUR-B-1.png)
 
-Unresolved cases cover an area of ​​89,656 ha (19.42%). The specific area of ​​each unresolved case can be seen in the csv file (PUR_unresolved_case.csv)
+Unresolved cases cover an area of 89,656 ha (19.42%). The specific area of each unresolved case can be seen in the csv file (PUR_unresolved_case.csv)
 
 ![](images/PUR-Build/PUR-B-2.png)
 

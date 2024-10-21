@@ -1,23 +1,10 @@
-# Planning unit reconciliation {#sec-reconcile}
-<<<<<<< HEAD
-
----
-title: "PUR Reconcile"
-editor: Ira Ratna
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
-  markdown: 
-    wrap: sentence
----
+# Planning unit reconciliation (Reconcile) {#sec-reconcile}
 
 ## Description
 
-<<<<<<< HEAD
-The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective.
-Moreover, this module can see the overlap of various land uses in a landscape.
+The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape.
 It helps the stakeholders to understand which area is overlapping and the size of the area.
 
-=======
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
 ## Usage
 
 ### Workflow
@@ -28,8 +15,6 @@ It helps the stakeholders to understand which area is overlapping and the size o
 
 ### Tips
 
-
-
 ## Data Requirements
 
 ### Input Data & Parameters
@@ -39,8 +24,6 @@ It helps the stakeholders to understand which area is overlapping and the size o
 
 ### Data Acquisition
 
-
-=======
 ### Step-by step instructions
 
 ### Tips
@@ -52,13 +35,10 @@ It helps the stakeholders to understand which area is overlapping and the size o
 ### Example Datasets
 
 ### Data Acquistion
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
 
 ## Outputs
 
 ### Output Files
-<<<<<<< HEAD
-=======
 
 ### Report Interpretation
 
@@ -72,5 +52,3 @@ It helps the stakeholders to understand which area is overlapping and the size o
 
 ## References
 
-[ @article{dewi2015negotiation, title={Negotiation support tools to enhance multifunctioning landscapes}, author={Dewi, Sonya and Ekadinata, Andree and Indiarto, Dony  and Nugraha, Alfa and van Noordwijk, Meine}, book={ Climate-Smart Landscapes: Multifunctionality in Practice }, pages={444}, year={2015}, publisher={ World Agroforestry Centre (ICRAF)} }]
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
