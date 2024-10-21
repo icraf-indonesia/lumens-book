@@ -83,7 +83,7 @@ Reconciled planning units recognize and address gaps between regulations and rea
 
 In this case, formerly, the unresolved cases cover an area of 89,656 ha (19.42%), and consist of 29 IDs (pixels?). After determining the desired planning unit type in the overlapping area, the analysis results show that these 29 pixels fall into 10 classes.
 
-![](images/PUR-Reconsile/Final Area.png)
+![](images/PUR-Reconsile/Final%20Area.png)
 
 ## Theoretical Background
 
