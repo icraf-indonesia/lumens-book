@@ -76,8 +76,10 @@ Before using the Pre-QuES Analysis tool, prepare the following:
 |------------|------------|------------|------------|------------|------------|
 | **No** | **Data Name** | **Type** | **Format** | **Projection Requirements** | **Description** |
 | 1\. | Reference map | Shapefile | .shp | UTM | A map land use type based on spatial planning |
-| 2\. | Reference class | Numerical | CSV |  | Reference of land use classes based on function |
-| 3\. | Reference class of reference map | Numerical | CSV |  | Reference classes of land use map |
+| 2\. | Reference class | Numerical | CSV |  | Determine reference classes.
+ |
+| 3\. | Reference class of reference map | Numerical | CSV |  | Classify/group each reference map class to its reference class
+ |
 | 4\. | Planning unit | Numerical | CSV |  | List of planning unit |
 
 ### Example Datasets
