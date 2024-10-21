@@ -93,9 +93,28 @@ Land cover maps can often be obtained from global or official national data. For
 
 ### Output Files
 
+| File Name | Type | Description |
+|------------------|----------|---------------------------------------------|
+| PUR_build_report | html | A report summarizing the analysis results with visualisations and tables. |
+| PUR_first_phase_result | GeoTIFF and shapefile | A map depicting the suitability of land use with permits and allocations. |
+| PUR_unresolved_case | CSV | A table showing the area of land that is overlapped with no decision. |
+| PUR-build_database and PUR_dbfinal | DBF and CSV | Table of all overlapping polygon results. |
+
 ### Report Interpretation
 
-## Theoritical Background
+This section presents the results of the PUR Build, focusing on the unresolved area. The total area of interest is 461,658 hectares. Of this, 80.58% (372,002 ha) was successfully reconciled, while 19.42% (89,656 ha) remained unresolved and requires further reconciliation action.
+
+The PUR unresolved case table can help identify which planning units overlap with the reference map.
+
+![](images/PUR-Build/PUR-B-1.png)
+
+Unresolved cases cover an area of ​​89,656 ha (19.42%). The specific area of ​​each unresolved case can be seen in the csv file (PUR_unresolved_case.csv)
+
+![](images/PUR-Build/PUR-B-2.png)
+
+ID represents one of the overlapping areas, that can be more than two classes. …
+
+## Theoretical Background
 
 ### Model Description
 
