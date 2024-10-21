@@ -44,15 +44,21 @@ Before using the Pre-QuES Analysis tool, prepare the following:
 
 -   Type: Users may input 0 (reconcile)/ 1 (additional).
 
-    -   **Additional (Type=1):** The reference map and planning unit (e.g., permits) are considered to have equal status. As a result, any overlap between the two will be treated as "unresolved," regardless of the "reference class."
+```         
+-   **Additional (Type=1):** The reference map and planning unit (e.g., permits) are considered to have equal status. As a result, any overlap between the two will be treated as "unresolved," regardless of the "reference class."
 
-    -   **Reconcile (Type=0):** The 'Reconcile' option makes the reference map the primary benchmark. Any overlap between the planning unit and the basemap will only be marked as 'unresolved' if both have identical 'reference classes.'
+-   **Reconcile (Type=0):** The 'Reconcile' option makes the reference map the primary benchmark. Any overlap between the planning unit and the basemap will only be marked as 'unresolved' if both have identical 'reference classes.'
+```
 
--   path: original planning unit file contains default path, and this column should be modified to the local address of map files. Note: For windows directories, replace the backslash (\\) into forward slash (/)
+-   path: original planning unit file contains default path, and this column should be modified to the local address of map files. To change the path (windows):\
+    -   select the map files in the file explorer and right click
+    -   click ‘copy as path’ menu
+    -   paste to the ‘path’ column
+    -   change all the back slash () to slash (/)
 
-    5.  Set your desired map resolution.
-    6.  Select the output directory you wish to save your analysis. You can create new folder to put the analysis results anywhere in your computer.
-    7.  Once complete, click on 'Run PUR Build' to start the analysis. A progress bar will appear, indicating the analysis status.
+5.  Set your desired map resolution.
+6.  Select the output directory you wish to save your analysis. You can create new folder to put the analysis results anywhere in your computer.
+7.  Once complete, click on 'Run PUR Build' to start the analysis. A progress bar will appear, indicating the analysis status.
 
 ![](images/PUR/PUR-1.png)
 
@@ -87,7 +93,7 @@ Land cover maps can often be obtained from global or official national data. For
 ### Output Files
 
 | File Name | Type | Description |
-|----------------|----------------|-----------------------------------------|
+|-------------------|-------------------|----------------------------------|
 | PUR_build_report | html | A report summarizing the analysis results with visualisations and tables. |
 | PUR_first_phase_result | GeoTIFF and shapefile | A map depicting the suitability of land use with permits and allocations. |
 | PUR_unresolved_case | CSV | A table showing the area of land that is overlapped with no decision. |
