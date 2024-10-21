@@ -1,19 +1,44 @@
-# Planning unit reconciliation (Reconcile) {#sec-reconcile}
+# Planning unit reconciliation {#sec-reconcile}
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+
+---
+title: "PUR Reconcile"
+editor: Ira Ratna
+<<<<<<< Updated upstream
+>>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
+=======
+>>>>>>> Stashed changes
+  markdown: 
+    wrap: sentence
+---
 
 ## Description
 
-The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape.
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective.
+Moreover, this module can see the overlap of various land uses in a landscape.
 It helps the stakeholders to understand which area is overlapping and the size of the area.
 
+=======
+>>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
+=======
+>>>>>>> Stashed changes
 ## Usage
 
 ### Workflow
 
+<<<<<<< Updated upstream
 
 ### Step-by-step instructions
 
 
 ### Tips
+
+
 
 ## Data Requirements
 
@@ -24,6 +49,10 @@ It helps the stakeholders to understand which area is overlapping and the size o
 
 ### Data Acquisition
 
+
+=======
+=======
+>>>>>>> Stashed changes
 ### Step-by step instructions
 
 ### Tips
@@ -35,10 +64,17 @@ It helps the stakeholders to understand which area is overlapping and the size o
 ### Example Datasets
 
 ### Data Acquistion
+<<<<<<< Updated upstream
+>>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
+=======
+>>>>>>> Stashed changes
 
 ## Outputs
 
 ### Output Files
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
 
 ### Report Interpretation
 
@@ -52,3 +88,9 @@ It helps the stakeholders to understand which area is overlapping and the size o
 
 ## References
 
+[ @article{dewi2015negotiation, title={Negotiation support tools to enhance multifunctioning landscapes}, author={Dewi, Sonya and Ekadinata, Andree and Indiarto, Dony  and Nugraha, Alfa and van Noordwijk, Meine}, book={ Climate-Smart Landscapes: Multifunctionality in Practice }, pages={444}, year={2015}, publisher={ World Agroforestry Centre (ICRAF)} }]
+>>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
+=======
+
+### Report Interpretation
+>>>>>>> Stashed changes
