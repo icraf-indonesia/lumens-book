@@ -1,1 +1,108 @@
-# Building planning unit {#sec-build}
+# Planning Unit Reconciliation (Build) {#sec-profit}
+
+---
+title: "PUR Build"
+editor: Ira Ratna
+  markdown: 
+    wrap: sentence
+---
+
+## Description
+
+The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape. It helps the stakeholders to understand which area is overlapping and the size of the area.
+
+## Usage
+
+### Workflow
+
+Users upload reference maps, select analysis parameters, and the module generates maps and statistics for each planning units.
+
+### Step-by step instructions
+
+**Step 1: Data Preparation**
+
+Before using the Pre-QuES Analysis tool, prepare the following:
+
+-   Reference Map: shape files representing spatial plan
+
+-   Reference class table: A CSV file describing class you wish to
+
+-   Reference class of the reference map table: A CSV file describing values with their corresponding reference map classes.
+
+-   List of Planning Unit Table: A CSV file contains ID of corresponding planning unit classes
+
+**Step 2: Uploading Data**
+
+1.  Users upload reference map (upload the .shp, .dbf. .prj, and .shx files).
+
+2.  Select reference classification (csv), containing information about the land use function classification, ie. Conservation, plantation, others.
+
+3.  Select reference classification of the reference map (csv), contain information about the land use classification, ie. Protected forest, plantation forest, urban area, watershed.
+
+4.  Input the list of planning units (csv). The planning unit table should contain five columns: PU name, PU identity, Reference ID, Type, and Path. The table should look like this.
+
+![](images/PUR/PUR-2.png)
+
+-   PU_name: planning unit name
+
+-   PU_identity: identity of each planning unit, it can be filled with pu1, pu2, … pu*n.*
+
+-   Ref_ID :reference ID
+
+-   Type: Users may input 0 (reconcile)/ 1 (additional).
+
+    -   **Additional (Type=1):** The reference map and planning unit (e.g., permits) are considered to have equal status. As a result, any overlap between the two will be treated as "unresolved," regardless of the "reference class."
+
+    -   **Reconcile (Type=0):** The 'Reconcile' option makes the reference map the primary benchmark. Any overlap between the planning unit and the basemap will only be marked as 'unresolved' if both have identical 'reference classes.'
+
+-   path: original planning unit file contains default path, and this column should be modified to the local address of map files. Note: For windows directories, replace the backslash (\\) into forward slash (/)
+
+    5.  Set your desired map resolution.
+    6.  Select the output directory you wish to save your analysis. You can create new folder to put the analysis results anywhere in your computer.
+    7.  Once complete, click on 'Run PUR Build' to start the analysis. A progress bar will appear, indicating the analysis status.
+
+![](images/PUR/PUR-1.png)
+
+### Tips
+
+-   While there is no rule of thumb, a higher input map resolution may require more time to compute and a lower input map resolution requires less time. Choose your preference.
+
+-   Ensure that the directory path is correctly written in the planning unit look up table.
+
+## Data Requirements
+
+### Input Data and Parameters
+
+|  |  |  |  |  |  |
+|------------|------------|------------|------------|------------|------------|
+| **No** | **Data Name** | **Type** | **Format** | **Projection Requirements** | **Description** |
+| 1\. | Reference map | Shapefile | .shp | UTM | A map land use type based on spatial planning |
+| 2\. | Reference class | Numerical | CSV |  | Reference of land use classes based on function |
+| 3\. | Reference class of reference map | Numerical | CSV |  | Reference classes of land use map |
+| 4\. | Planning unit | Numerical | CSV |  | List of planning unit |
+
+### Example Datasets
+
+Practice data sets used in this module can be accessed at **agroforestri.id/lumens-pur**
+
+### Data Acquistion
+
+Land cover maps can often be obtained from global or official national data. For creating your own land cover maps from satellite imagery, consider using software such as Google Earth Engine, ArcGIS and R.
+
+## Outputs
+
+### Output Files
+
+### Report Interpretation
+
+## Theoritical Background
+
+### Model Description
+
+The PUR module helps identify the location and extent of various overlapping area designations. These results can then be used as a basis for more open and directed discussions in the process of updating planning units.
+
+### Key Assumptions
+
+### Limitations
+
+## References
