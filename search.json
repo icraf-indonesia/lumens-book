@@ -30,6 +30,149 @@
     ]
   },
   {
+    "objectID": "01-build.html",
+    "href": "01-build.html",
+    "title": "1  Planning Unit Reconciliation (Build)",
+    "section": "",
+    "text": "1.1 Description\nThe Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape. It helps the stakeholders to understand which area is overlapping and the size of the area.",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Planning Unit Reconciliation (Build)</span>"
+    ]
+  },
+  {
+    "objectID": "01-build.html#usage",
+    "href": "01-build.html#usage",
+    "title": "1  Planning Unit Reconciliation (Build)",
+    "section": "1.2 Usage",
+    "text": "1.2 Usage\n\n1.2.1 Workflow\nUsers upload reference maps, select analysis parameters, and the module generates maps and statistics for each planning units.\n\n\n1.2.2 Step-by step instructions\nStep 1: Data Preparation\nBefore using the Pre-QuES Analysis tool, prepare the following:\n\nReference Map: shape files representing spatial plan\nReference class table: A CSV file describing class you wish to\nReference class of the reference map table: A CSV file describing values with their corresponding reference map classes.\nList of Planning Unit Table: A CSV file contains ID of corresponding planning unit classes\n\nStep 2: Uploading Data\n\nUsers upload reference map (upload the .shp, .dbf. .prj, and .shx files).\nSelect reference classification (csv), containing information about the land use function classification, ie. Conservation, plantation, others.\nSelect reference classification of the reference map (csv), contain information about the land use classification, ie. Protected forest, plantation forest, urban area, watershed.\nInput the list of planning units (csv). The planning unit table should contain five columns: PU name, PU identity, Reference ID, Type, and Path. The table should look like this.\n\n\n\nPU_name: planning unit name\nPU_identity: identity of each planning unit, it can be filled with pu1, pu2, … pu-n.\nRef_ID :reference ID\nType: Users may input 0 (reconcile)/ 1 (additional).\n\nAdditional (Type=1): The reference map and planning unit (e.g., permits) are considered to have equal status. As a result, any overlap between the two will be treated as “unresolved,” regardless of the “reference class.”\nReconcile (Type=0): The ‘Reconcile’ option makes the reference map the primary benchmark. Any overlap between the planning unit and the basemap will only be marked as ‘unresolved’ if both have identical ‘reference classes.’\n\npath: original planning unit file contains default path, and this column should be modified to the local address of map files. Note: For windows directories, replace the backslash (\\) into forward slash (/)\n\nSet your desired map resolution.\nSelect the output directory you wish to save your analysis. You can create new folder to put the analysis results anywhere in your computer.\nOnce complete, click on ‘Run PUR Build’ to start the analysis. A progress bar will appear, indicating the analysis status.\n\n\n\n\n\n1.2.3 Tips\n\nWhile there is no rule of thumb, a higher input map resolution may require more time to compute and a lower input map resolution requires less time. Choose your preference.\nEnsure that the directory path is correctly written in the planning unit look up table.",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Planning Unit Reconciliation (Build)</span>"
+    ]
+  },
+  {
+    "objectID": "01-build.html#data-requirements",
+    "href": "01-build.html#data-requirements",
+    "title": "1  Planning Unit Reconciliation (Build)",
+    "section": "1.3 Data Requirements",
+    "text": "1.3 Data Requirements\n\n1.3.1 Input Data and Parameters\n\n\n\n\n\n\n\n\n\n\n\nNo\nData Name\nType\nFormat\nProjection Requirements\nDescription\n\n\n1.\nReference map\nShapefile\n.shp\nUTM\nA map land use type based on spatial planning\n\n\n2.\nReference class\nNumerical\nCSV\n\nReference of land use classes based on function\n\n\n3.\nReference class of reference map\nNumerical\nCSV\n\nReference classes of land use map\n\n\n4.\nPlanning unit\nNumerical\nCSV\n\nList of planning unit\n\n\n\n\n\n1.3.2 Example Datasets\nPractice data sets used in this module can be accessed at agroforestri.id/lumens-pur\n\n\n1.3.3 Data Acquistion\nLand cover maps can often be obtained from global or official national data. For creating your own land cover maps from satellite imagery, consider using software such as Google Earth Engine, ArcGIS and R.",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Planning Unit Reconciliation (Build)</span>"
+    ]
+  },
+  {
+    "objectID": "01-build.html#outputs",
+    "href": "01-build.html#outputs",
+    "title": "1  Planning Unit Reconciliation (Build)",
+    "section": "1.4 Outputs",
+    "text": "1.4 Outputs\n\n1.4.1 Output Files\n\n\n\n\n\n\n\n\nFile Name\nType\nDescription\n\n\n\n\nPUR_build_report\nhtml\nA report summarizing the analysis results with visualisations and tables.\n\n\nPUR_first_phase_result\nGeoTIFF and shapefile\nA map depicting the suitability of land use with permits and allocations.\n\n\nPUR_unresolved_case\nCSV\nA table showing the area of land that is overlapped with no decision.\n\n\nPUR-build_database and PUR_dbfinal\nDBF and CSV\nTable of all overlapping polygon results.\n\n\n\n\n\n1.4.2 Report Interpretation\nThis section presents the results of the PUR Build, focusing on the unresolved area. The total area of interest is 461,658 hectares. Of this, 80.58% (372,002 ha) was successfully reconciled, while 19.42% (89,656 ha) remained unresolved and requires further reconciliation action.\nThe PUR unresolved case table can help identify which planning units overlap with the reference map.\n\nUnresolved cases cover an area of 89,656 ha (19.42%). The specific area of each unresolved case can be seen in the csv file (PUR_unresolved_case.csv)\n\nID represents one of the overlapping areas, that can be more than two classes. …",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Planning Unit Reconciliation (Build)</span>"
+    ]
+  },
+  {
+    "objectID": "01-build.html#theoretical-background",
+    "href": "01-build.html#theoretical-background",
+    "title": "1  Planning Unit Reconciliation (Build)",
+    "section": "1.5 Theoretical Background",
+    "text": "1.5 Theoretical Background\n\n1.5.1 Model Description\nThe PUR module helps identify the location and extent of various overlapping area designations. These results can then be used as a basis for more open and directed discussions in the process of updating planning units.\n\n\n1.5.2 Key Assumptions\n\n\n1.5.3 Limitations",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Planning Unit Reconciliation (Build)</span>"
+    ]
+  },
+  {
+    "objectID": "01-build.html#references",
+    "href": "01-build.html#references",
+    "title": "1  Planning Unit Reconciliation (Build)",
+    "section": "1.6 References",
+    "text": "1.6 References",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Planning Unit Reconciliation (Build)</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconcile.html",
+    "href": "02-reconcile.html",
+    "title": "2  Planning unit reconciliation (Reconcile)",
+    "section": "",
+    "text": "2.1 Description\nThe Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape. It helps the stakeholders to understand which area is overlapping and the size of the area.",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning unit reconciliation (Reconcile)</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconcile.html#usage",
+    "href": "02-reconcile.html#usage",
+    "title": "2  Planning unit reconciliation (Reconcile)",
+    "section": "2.2 Usage",
+    "text": "2.2 Usage\n\n2.2.1 Workflow\n\n\n2.2.2 Step-by-step instructions\n\n\n2.2.3 Tips",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning unit reconciliation (Reconcile)</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconcile.html#data-requirements",
+    "href": "02-reconcile.html#data-requirements",
+    "title": "2  Planning unit reconciliation (Reconcile)",
+    "section": "2.3 Data Requirements",
+    "text": "2.3 Data Requirements\n\n2.3.1 Input Data & Parameters\n\n\n2.3.2 Example Datasets\n\n\n2.3.3 Data Acquisition\n\n\n2.3.4 Step-by step instructions\n\n\n2.3.5 Tips",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning unit reconciliation (Reconcile)</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconcile.html#data-requirements-1",
+    "href": "02-reconcile.html#data-requirements-1",
+    "title": "2  Planning unit reconciliation (Reconcile)",
+    "section": "2.4 Data Requirements",
+    "text": "2.4 Data Requirements\n\n2.4.1 Input Data and Parameters\n\n\n2.4.2 Example Datasets\n\n\n2.4.3 Data Acquistion",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning unit reconciliation (Reconcile)</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconcile.html#outputs",
+    "href": "02-reconcile.html#outputs",
+    "title": "2  Planning unit reconciliation (Reconcile)",
+    "section": "2.5 Outputs",
+    "text": "2.5 Outputs\n\n2.5.1 Output Files\n\n\n2.5.2 Report Interpretation",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning unit reconciliation (Reconcile)</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconcile.html#theoretical-background",
+    "href": "02-reconcile.html#theoretical-background",
+    "title": "2  Planning unit reconciliation (Reconcile)",
+    "section": "2.6 Theoretical Background",
+    "text": "2.6 Theoretical Background\n\n2.6.1 Model Description\n\n\n2.6.2 Key Assumptions\n\n\n2.6.3 Limitations",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning unit reconciliation (Reconcile)</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconcile.html#references",
+    "href": "02-reconcile.html#references",
+    "title": "2  Planning unit reconciliation (Reconcile)",
+    "section": "2.7 References",
+    "text": "2.7 References",
+    "crumbs": [
+      "Planning Unit Reconciliation (PUR)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning unit reconciliation (Reconcile)</span>"
+    ]
+  },
+  {
     "objectID": "05-biodiversity.html",
     "href": "05-biodiversity.html",
     "title": "5  Biodiversity",

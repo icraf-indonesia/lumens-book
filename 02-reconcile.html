@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Planning unit reconciliation – LUMENS User Guide</title>
+<title>2&nbsp; Planning unit reconciliation (Reconcile) – LUMENS User Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pur.html">Planning Unit Reconciliation (PUR)</a></li><li class="breadcrumb-item"><a href="./02-reconcile.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pur.html">Planning Unit Reconciliation (PUR)</a></li><li class="breadcrumb-item"><a href="./02-reconcile.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation (Reconcile)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -188,13 +188,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Building planning unit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Planning Unit Reconciliation (Build)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-reconcile.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation (Reconcile)</span></span></a>
   </div>
 </li>
       </ul>
@@ -321,15 +321,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description"><span class="header-section-number">2.1</span> Description</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage"><span class="header-section-number">2.2</span> Usage</a>
+  <ul class="collapse">
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow"><span class="header-section-number">2.2.1</span> Workflow</a></li>
+  <li><a href="#step-by-step-instructions" id="toc-step-by-step-instructions" class="nav-link" data-scroll-target="#step-by-step-instructions"><span class="header-section-number">2.2.2</span> Step-by-step instructions</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips"><span class="header-section-number">2.2.3</span> Tips</a></li>
+  </ul></li>
+  <li><a href="#data-requirements" id="toc-data-requirements" class="nav-link" data-scroll-target="#data-requirements"><span class="header-section-number">2.3</span> Data Requirements</a>
+  <ul class="collapse">
+  <li><a href="#input-data-parameters" id="toc-input-data-parameters" class="nav-link" data-scroll-target="#input-data-parameters"><span class="header-section-number">2.3.1</span> Input Data &amp; Parameters</a></li>
+  <li><a href="#example-datasets" id="toc-example-datasets" class="nav-link" data-scroll-target="#example-datasets"><span class="header-section-number">2.3.2</span> Example Datasets</a></li>
+  <li><a href="#data-acquisition" id="toc-data-acquisition" class="nav-link" data-scroll-target="#data-acquisition"><span class="header-section-number">2.3.3</span> Data Acquisition</a></li>
+  <li><a href="#step-by-step-instructions-1" id="toc-step-by-step-instructions-1" class="nav-link" data-scroll-target="#step-by-step-instructions-1"><span class="header-section-number">2.3.4</span> Step-by step instructions</a></li>
+  <li><a href="#tips-1" id="toc-tips-1" class="nav-link" data-scroll-target="#tips-1"><span class="header-section-number">2.3.5</span> Tips</a></li>
+  </ul></li>
+  <li><a href="#data-requirements-1" id="toc-data-requirements-1" class="nav-link" data-scroll-target="#data-requirements-1"><span class="header-section-number">2.4</span> Data Requirements</a>
+  <ul class="collapse">
+  <li><a href="#input-data-and-parameters" id="toc-input-data-and-parameters" class="nav-link" data-scroll-target="#input-data-and-parameters"><span class="header-section-number">2.4.1</span> Input Data and Parameters</a></li>
+  <li><a href="#example-datasets-1" id="toc-example-datasets-1" class="nav-link" data-scroll-target="#example-datasets-1"><span class="header-section-number">2.4.2</span> Example Datasets</a></li>
+  <li><a href="#data-acquistion" id="toc-data-acquistion" class="nav-link" data-scroll-target="#data-acquistion"><span class="header-section-number">2.4.3</span> Data Acquistion</a></li>
+  </ul></li>
+  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs"><span class="header-section-number">2.5</span> Outputs</a>
+  <ul class="collapse">
+  <li><a href="#output-files" id="toc-output-files" class="nav-link" data-scroll-target="#output-files"><span class="header-section-number">2.5.1</span> Output Files</a></li>
+  <li><a href="#report-interpretation" id="toc-report-interpretation" class="nav-link" data-scroll-target="#report-interpretation"><span class="header-section-number">2.5.2</span> Report Interpretation</a></li>
+  </ul></li>
+  <li><a href="#theoretical-background" id="toc-theoretical-background" class="nav-link" data-scroll-target="#theoretical-background"><span class="header-section-number">2.6</span> Theoretical Background</a>
+  <ul class="collapse">
+  <li><a href="#model-description" id="toc-model-description" class="nav-link" data-scroll-target="#model-description"><span class="header-section-number">2.6.1</span> Model Description</a></li>
+  <li><a href="#key-assumptions" id="toc-key-assumptions" class="nav-link" data-scroll-target="#key-assumptions"><span class="header-section-number">2.6.2</span> Key Assumptions</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">2.6.3</span> Limitations</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2.7</span> References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pur.html">Planning Unit Reconciliation (PUR)</a></li><li class="breadcrumb-item"><a href="./02-reconcile.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pur.html">Planning Unit Reconciliation (PUR)</a></li><li class="breadcrumb-item"><a href="./02-reconcile.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation (Reconcile)</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-reconcile" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-reconcile" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Planning unit reconciliation (Reconcile)</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -346,10 +384,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="description" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="description"><span class="header-section-number">2.1</span> Description</h2>
+<p>The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape. It helps the stakeholders to understand which area is overlapping and the size of the area.</p>
+</section>
+<section id="usage" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="usage"><span class="header-section-number">2.2</span> Usage</h2>
+<section id="workflow" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="workflow"><span class="header-section-number">2.2.1</span> Workflow</h3>
+</section>
+<section id="step-by-step-instructions" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="step-by-step-instructions"><span class="header-section-number">2.2.2</span> Step-by-step instructions</h3>
+</section>
+<section id="tips" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="tips"><span class="header-section-number">2.2.3</span> Tips</h3>
+</section>
+</section>
+<section id="data-requirements" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="data-requirements"><span class="header-section-number">2.3</span> Data Requirements</h2>
+<section id="input-data-parameters" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="input-data-parameters"><span class="header-section-number">2.3.1</span> Input Data &amp; Parameters</h3>
+</section>
+<section id="example-datasets" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="example-datasets"><span class="header-section-number">2.3.2</span> Example Datasets</h3>
+</section>
+<section id="data-acquisition" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="data-acquisition"><span class="header-section-number">2.3.3</span> Data Acquisition</h3>
+</section>
+<section id="step-by-step-instructions-1" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="step-by-step-instructions-1"><span class="header-section-number">2.3.4</span> Step-by step instructions</h3>
+</section>
+<section id="tips-1" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="tips-1"><span class="header-section-number">2.3.5</span> Tips</h3>
+</section>
+</section>
+<section id="data-requirements-1" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="data-requirements-1"><span class="header-section-number">2.4</span> Data Requirements</h2>
+<section id="input-data-and-parameters" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="input-data-and-parameters"><span class="header-section-number">2.4.1</span> Input Data and Parameters</h3>
+</section>
+<section id="example-datasets-1" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="example-datasets-1"><span class="header-section-number">2.4.2</span> Example Datasets</h3>
+</section>
+<section id="data-acquistion" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="data-acquistion"><span class="header-section-number">2.4.3</span> Data Acquistion</h3>
+</section>
+</section>
+<section id="outputs" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="outputs"><span class="header-section-number">2.5</span> Outputs</h2>
+<section id="output-files" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="output-files"><span class="header-section-number">2.5.1</span> Output Files</h3>
+</section>
+<section id="report-interpretation" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="report-interpretation"><span class="header-section-number">2.5.2</span> Report Interpretation</h3>
+</section>
+</section>
+<section id="theoretical-background" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="theoretical-background"><span class="header-section-number">2.6</span> Theoretical Background</h2>
+<section id="model-description" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="model-description"><span class="header-section-number">2.6.1</span> Model Description</h3>
+</section>
+<section id="key-assumptions" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="key-assumptions"><span class="header-section-number">2.6.2</span> Key Assumptions</h3>
+</section>
+<section id="limitations" class="level3" data-number="2.6.3">
+<h3 data-number="2.6.3" class="anchored" data-anchor-id="limitations"><span class="header-section-number">2.6.3</span> Limitations</h3>
+</section>
+</section>
+<section id="references" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="references"><span class="header-section-number">2.7</span> References</h2>
 
 
 <!-- -->
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -825,8 +933,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01-build.html" class="pagination-link" aria-label="Building planning unit">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Building planning unit</span></span>
+      <a href="./01-build.html" class="pagination-link" aria-label="Planning Unit Reconciliation (Build)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Planning Unit Reconciliation (Build)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -835,7 +943,59 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Planning unit reconciliation {#sec-reconcile}</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Planning unit reconciliation (Reconcile) {#sec-reconcile}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Description</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective. Moreover, this module can see the overlap of various land uses in a landscape.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>It helps the stakeholders to understand which area is overlapping and the size of the area.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Usage</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">### Workflow</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step-by-step instructions</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tips</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Requirements</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### Input Data &amp; Parameters</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example Datasets</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Acquisition</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step-by step instructions</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tips</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Requirements</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### Input Data and Parameters</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example Datasets</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Acquistion</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Outputs</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">### Output Files</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report Interpretation</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical Background</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Model Description</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### Key Assumptions</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">### Limitations</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
