@@ -45,7 +45,7 @@ Before using the Pre-QuES Analysis tool, prepare the following:
 
 -   PU_name: planning unit name
 
--   PU_identity: identity of each planning unit, it can be filled with pu1, pu2, … pu*n.*
+-   PU_identity: identity of each planning unit, it can be filled with pu1, pu2, … pu-*n.*
 
 -   Ref_ID :reference ID
 
@@ -94,7 +94,7 @@ Land cover maps can often be obtained from global or official national data. For
 ### Output Files
 
 | File Name | Type | Description |
-|------------------|----------|---------------------------------------------|
+|----------------|----------------|-----------------------------------------|
 | PUR_build_report | html | A report summarizing the analysis results with visualisations and tables. |
 | PUR_first_phase_result | GeoTIFF and shapefile | A map depicting the suitability of land use with permits and allocations. |
 | PUR_unresolved_case | CSV | A table showing the area of land that is overlapped with no decision. |
