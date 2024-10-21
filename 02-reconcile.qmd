@@ -8,7 +8,7 @@ This module can be used to develop rules to resolve conflicting perspectives on 
 
 ### Workflow
 
-![](images/PUR-Reconsile/PUR Reconsile Module Steps.png)
+![](images/PUR-Reconsile/PUR%20Reconsile%20Module%20Steps.png)
 
 Data Preparation
 
@@ -40,7 +40,7 @@ Step 1: Uploading Data
 
 (1) Build planning unit with uploading Unresolved Case Map shapefile Select all related shapefiles (dbf, .prj, .shp, .shx), as shown below
 
-    ![](images/PUR-Reconsile/unresolve map.png)
+    ![](images/PUR-Reconsile/unresolve%20map.png)
 
 (2) Unresolved Case Attribute Detailed unresolved case table. Please make sure that the reconcile action column is ‘resolved’.
 
@@ -50,29 +50,28 @@ Step 3: Running the Analysis - Click the “Run Analysis” button. - A progress
 
 ### Tips
 
+Ensure the reconcile action in reconciliation table has been defined.
+
 ## Data Requirements
-
-
 
 ### Input Data and Parameters
 
-
+|  |  |  |  |  |  |
+|------------|------------|------------|------------|------------|------------|
+| **No** | **Data Name** | **Type** | **Format** | **Projection Requirements** | **Description** |
+| 1\. | Planning Unit map | Shape file | .shp | UTM | This map is the output of PUR Build and contain every reconciled and unresolved case area information. |
+|  |  |  |  |  |  |
+| 2\. | Reconciliation table | Numerical | CSV | Table shows the area of land that overlapped | Unresolved case per ID |
 
 ### Example Datasets
 
-
+Practice data sets used in this module can be accessed at **agroforestri.id/lumens-pur**
 
 ### Data Acquistion
 
-
-
 ## Outputs
 
-
-
 ### Output Files
-
-
 
 ### Report Interpretation
 
@@ -84,6 +83,8 @@ Reconciled planning units recognize and address gaps between regulations and rea
 
 In this case, formerly, the unresolved cases cover an area of 89,656 ha (19.42%), and consist of 29 IDs (pixels?). After determining the desired planning unit type in the overlapping area, the analysis results show that these 29 pixels fall into 10 classes.
 
+![](images/PUR-Reconsile/Final Area.png)
+
 ## Theoretical Background
 
 ### Model Description
@@ -92,11 +93,7 @@ The PUR module helps identify the location and extent of various overlapping are
 
 ### Key Assumptions
 
-
-
 ### Limitations
-
-
 
 ## References
 
