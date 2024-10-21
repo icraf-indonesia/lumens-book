@@ -8,6 +8,8 @@ This module can be used to develop rules to resolve conflicting perspectives on 
 
 ### Workflow
 
+![](images/PUR-Reconsile/PUR Reconsile Module Steps.png)
+
 Data Preparation
 
 (1) Unresolved Case Map (Shape file format) Shape file of overlayed planning units with some layer that conflict, defined as unresolved case.
@@ -30,23 +32,57 @@ Data Preparation
 
         ![](images/PUR-Reconsile/unresolved_new%20class3.png)
 
+    d)  Now you can choose the new class as a reconciliation action.
+
 ### Step-by step instructions
+
+Step 1: Uploading Data
+
+(1) Build planning unit with uploading Unresolved Case Map shapefile Select all related shapefiles (dbf, .prj, .shp, .shx), as shown below
+
+    ![](images/PUR-Reconsile/unresolve map.png)
+
+(2) Unresolved Case Attribute Detailed unresolved case table. Please make sure that the reconcile action column is ‘resolved’.
+
+(3) Unresolved attributes table (.xlsx)
+
+Step 3: Running the Analysis - Click the “Run Analysis” button. - A progress bar will appear, indicating the analysis status. - Once complete, the results will be displayed in the “Results” tab.
 
 ### Tips
 
 ## Data Requirements
 
+
+
 ### Input Data and Parameters
+
+
 
 ### Example Datasets
 
+
+
 ### Data Acquistion
+
+
 
 ## Outputs
 
+
+
 ### Output Files
 
+
+
 ### Report Interpretation
+
+Planning unit reconciliation is a process to resolve overlapping permits by referring to function reference maps. Reconciliation is done by analyzing how well the permit data matches the reference data. Permit data can include things like forest management concessions, plantation permits, mining permits, and others. Reference data can be spatial planning data or area designation data.
+
+By analyzing this overlap area, the module helps stakeholders understand the economic drivers of land use and resource allocation. This information is crucial for policymakers facing real-world challenges. If there is an overlap, then this must be discussed and agreed upon by stakeholders. An alternative approach involves facilitating discussion within the forum regarding the hierarchy or prioritization of the data layers utilized in the creation of planning units. For instance, land allocation may be designated as the highest priority, followed by community-based management as the second priority, and permits as the third. This hierarchy can be established through collaborative discussions or by employing the Analytic Hierarchy Process (AHP). AHP can be used as a tool to help decision makers in situations involving many factors that need to be considered.
+
+Reconciled planning units recognize and address gaps between regulations and realities, perspectives of policymakers and local land managers, economic driving factors and land capability.
+
+In this case, formerly, the unresolved cases cover an area of 89,656 ha (19.42%), and consist of 29 IDs (pixels?). After determining the desired planning unit type in the overlapping area, the analysis results show that these 29 pixels fall into 10 classes.
 
 ## Theoretical Background
 
@@ -56,7 +92,11 @@ The PUR module helps identify the location and extent of various overlapping are
 
 ### Key Assumptions
 
+
+
 ### Limitations
+
+
 
 ## References
 
