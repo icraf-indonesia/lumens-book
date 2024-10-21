@@ -1,58 +1,13 @@
 # Planning unit reconciliation {#sec-reconcile}
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-
----
-title: "PUR Reconcile"
-editor: Ira Ratna
-<<<<<<< Updated upstream
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
-=======
->>>>>>> Stashed changes
-  markdown: 
-    wrap: sentence
----
 
 ## Description
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-The Planning Unit Reconciliation (PUR) menu is used to build zoning or planning units to achieve sustainable and appropriate landscape management, both from a local, policy and scientific perspective.
-Moreover, this module can see the overlap of various land uses in a landscape.
-It helps the stakeholders to understand which area is overlapping and the size of the area.
+This module can be used to develop rules to resolve conflicting perspectives on land allocation. This module allows modification to the planning unit attribute table and dissolve planning unit per unique ID. Planning unit reconciliation is a process to resolve overlapping permits by referring to function reference maps. Reconciliation is done by analyzing how well the permit data matches the reference data.
 
-=======
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
-=======
->>>>>>> Stashed changes
 ## Usage
 
 ### Workflow
 
-<<<<<<< Updated upstream
-
-### Step-by-step instructions
-
-
-### Tips
-
-
-
-## Data Requirements
-
-### Input Data & Parameters
-
-### Example Datasets
-
-
-### Data Acquisition
-
-
-=======
-=======
->>>>>>> Stashed changes
 ### Step-by step instructions
 
 ### Tips
@@ -64,17 +19,10 @@ It helps the stakeholders to understand which area is overlapping and the size o
 ### Example Datasets
 
 ### Data Acquistion
-<<<<<<< Updated upstream
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
-=======
->>>>>>> Stashed changes
 
 ## Outputs
 
 ### Output Files
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 
 ### Report Interpretation
 
@@ -82,15 +30,12 @@ It helps the stakeholders to understand which area is overlapping and the size o
 
 ### Model Description
 
+The PUR module helps identify the location and extent of various overlapping area designations. These results can then be used as a basis for more open and directed discussions in the process of updating planning units.
+
 ### Key Assumptions
 
 ### Limitations
 
 ## References
 
-[ @article{dewi2015negotiation, title={Negotiation support tools to enhance multifunctioning landscapes}, author={Dewi, Sonya and Ekadinata, Andree and Indiarto, Dony  and Nugraha, Alfa and van Noordwijk, Meine}, book={ Climate-Smart Landscapes: Multifunctionality in Practice }, pages={444}, year={2015}, publisher={ World Agroforestry Centre (ICRAF)} }]
->>>>>>> 57dd64f854d7e33a1187677c923b33330d12dcdd
-=======
-
-### Report Interpretation
->>>>>>> Stashed changes
+\[ \@article{dewi2015negotiation, title={Negotiation support tools to enhance multifunctioning landscapes}, author={Dewi, Sonya and Ekadinata, Andree and Indiarto, Dony and Nugraha, Alfa and van Noordwijk, Meine}, book={ Climate-Smart Landscapes: Multifunctionality in Practice }, pages={444}, year={2015}, publisher={ World Agroforestry Centre (ICRAF)} }\]
