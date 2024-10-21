@@ -8,6 +8,28 @@ This module can be used to develop rules to resolve conflicting perspectives on 
 
 ### Workflow
 
+Data Preparation
+
+(1) Unresolved Case Map (Shape file format) Shape file of overlayed planning units with some layer that conflict, defined as unresolved case.
+
+(2) Unresolved Case Attribute (CSV format) Detailed unresolved case table. Before running PUR Reconcile module, the reconcile action (drop-down selection) on 'PUR_unresolved_case.xlsx' need to be defined. You can use Microsoft Excel or any free spreadsheet software (e.g. Google Sheet) to do it.
+
+    ![](images/PUR-Reconsile/unresolved%20case%20resolve%20attribute.png)
+
+    If you want to add a new class on ‘reconcile action’, the steps are:
+
+    a)  Unhide the sheet, you will see ‘drop-down_attribute’
+
+    b)  Click Data \> Data Validation
+
+        Source \> Block the columns you want to add
+
+        ![](images/PUR-Reconsile/unresolved_new%20class2.png)
+
+    c)  Open the ‘PUR_unresolved_case’ sheet, click data validation. Fill in the source the same as written in the ‘drop-down_attribute.
+
+        ![](images/PUR-Reconsile/unresolved_new%20class3.png)
+
 ### Step-by step instructions
 
 ### Tips
