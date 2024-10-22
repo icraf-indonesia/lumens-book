@@ -56,12 +56,12 @@ Ensure the reconcile action in reconciliation table has been defined.
 
 ### Input Data and Parameters
 
-|  |  |  |  |  |  |
-|------------|------------|------------|------------|------------|------------|
-| **No** | **Data Name** | **Type** | **Format** | **Projection Requirements** | **Description** |
-| 1\. | Planning Unit map | Shape file | .shp | UTM | This map is the output of PUR Build and contain every reconciled and unresolved case area information. |
-|  |  |  |  |  |  |
-| 2\. | Reconciliation table | Numerical | CSV | Table shows the area of land that overlapped | Unresolved case per ID |
+|        |                      |            |            |                                              |                                                                                                        |
+|--------|----------------------|------------|------------|----------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **No** | **Data Name**        | **Type**   | **Format** | **Projection Requirements**                  | **Description**                                                                                        |
+| 1\.    | Planning Unit map    | Shape file | .shp       | UTM                                          | This map is the output of PUR Build and contain every reconciled and unresolved case area information. |
+|        |                      |            |            |                                              |                                                                                                        |
+| 2\.    | Reconciliation table | Numerical  | CSV        | Table shows the area of land that overlapped | Unresolved case per ID                                                                                 |
 
 ### Example Datasets
 
