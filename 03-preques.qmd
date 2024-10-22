@@ -1,12 +1,5 @@
 # Land use changes and trajectories {#sec-pre}
 
----
-title: "PreQuES"
-editor: Ira Ratna
-  markdown: 
-    wrap: sentence
----
-
 ## Description
 
 ## Usage
