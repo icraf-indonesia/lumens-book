@@ -166,7 +166,7 @@
     "href": "03-preques.html",
     "title": "3  Land use changes and trajectories",
     "section": "",
-    "text": "3.1 Description",
+    "text": "3.1 Description\nPre-QuES (Preliminary Quantification of Ecosystem Services) is a land use change assessment module that provides key information to identify potential drivers of land use change. This analysis quantifies land cover types and their changes over time, identifies specific land use change trajectories, breaks down changes by administrative or planning units, and visualizes land use dynamics through maps and Sankey-charts.",
     "crumbs": [
       "Quantification of Environmental Services (QUES)",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Land use changes and trajectories</span>"
@@ -177,7 +177,7 @@
     "href": "03-preques.html#usage",
     "title": "3  Land use changes and trajectories",
     "section": "3.2 Usage",
-    "text": "3.2 Usage\n\n3.2.1 Workflow\n\n\n3.2.2 Step-by step instructions\n\n\n3.2.3 Tips",
+    "text": "3.2 Usage\n\n3.2.1 Workflow\n\nData Preparation\nBefore using the Pre-QuES Analysis tool, prepare the following:\n• Land Cover Maps: Two raster files (GeoTIFF format) representing land use/cover for two different time points (T1 and T2)\n• Planning Unit Map: A raster file (GeoTIFF format) or shapefile of administrative or management zones.\n• Land Use/Cover Lookup Table: A CSV file describing raster values with their corresponding land cover classes.\n• Planning Unit Table: A CSV file describes raster values with their corresponding planning unit classes. This file is required only if the planning unit map is in raster (GeoTIFF) format. • Trajectory Rules: A CSV file defining rules for classifying land use change trajectories\n\n\n3.2.2 Step-by step instructions\nStep 1: Uploading Data\nFollow these steps to use the tool:\n1. Land Use/Cover T1\nClick “Browse” and select your land cover raster file for the first time point (T1).\n2. T1 Year\nEnter the year corresponding to the T1 land cover data.\n3. Land Use/Cover T2\nClick “Browse” and select your land cover raster file for the second time point (T2).\n4. T2 Year\nEnter the year corresponding to the T2 land cover data.\n5. Land Use/Cover Lookup Table Click “Browse” and select your prepared CSV file containing the land cover classification scheme.\n6. Planning Units\nInput Type Select either “Raster” or “Shapefile” for your planning unit data.\n7. Planning Units\nClick “Browse” and select your planning unit raster or shapefile.\n8. Planning Units Lookup\nIf using a raster, click “Browse” to select a CSV file with planning unit classifications.\n9. Trajectory Rules\nClick “Browse” and select your CSV file defining trajectory rules.\n10. Output Directory\nClick “Select Output Directory” to choose where results will be saved.\n11. Run Analysis\nClick “Run Pre-QuES Analysis” to start the process.\nStep 2: Setting Analysis Parameters\nStep 3: Running the Analysis\n\n\n3.2.3 Tips",
     "crumbs": [
       "Quantification of Environmental Services (QUES)",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Land use changes and trajectories</span>"
@@ -188,7 +188,7 @@
     "href": "03-preques.html#data-requirements",
     "title": "3  Land use changes and trajectories",
     "section": "3.3 Data Requirements",
-    "text": "3.3 Data Requirements\n\n3.3.1 Input Data and Parameters\n\n\n3.3.2 Example Datasets\n\n\n3.3.3 Data Acquistion",
+    "text": "3.3 Data Requirements\nBefore conducting an analysis using the Pre-QuES module, users are required to prepare:\n\nLand cover data at a minimum of two different points in time.\nOther spatial data used is a spatial allocation map that is compiled based on the agreement of the parties in the use of regional space.\nSome data that can be used to represent this planning unit data such as area designation, spatial planning, Watershed Area (DAS), administration, or overlay of several permit data that have been issued.\nIn addition to spatial data, other input data required are land cover/land use type attribute data and attribute data from its planning unit class. This data is prepared in comma delimited (csv) file format\n\n\n3.3.1 Input Data and Parameters\n\n\n3.3.2 Example Datasets\n\n\n3.3.3 Data Acquistion",
     "crumbs": [
       "Quantification of Environmental Services (QUES)",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Land use changes and trajectories</span>"
@@ -199,10 +199,98 @@
     "href": "03-preques.html#outputs",
     "title": "3  Land use changes and trajectories",
     "section": "3.4 Outputs",
-    "text": "3.4 Outputs\n\n3.4.1 Output Files\n\n\n3.4.2 Report Interpretation",
+    "text": "3.4 Outputs\n\n3.4.1 Accessing Outputs\nAfter the analysis completes, you’ll find the following in your selected output directory:\n\nPre-QuES Land Use Change Transition Table: A CSV file detailing land cover transitions between T1 and T2.\nChange Trajectory Map: A GeoTIFF file illustrating spatial patterns of land use change trajectories.\nForest Change Trajectory Map: A GeoTIFF file showing forest-specific change patterns (e.g., deforestation, degradation).\nPre-QuES Report: An HTML file providing a comprehensive overview of the analysis results, including:\nLand cover composition tables and graphs\nSankey diagrams of land use dynamics\nTop land use changes at landscape and planning unit levels\nTrajectory analysis results and visualizations\n\nThese outputs will help you understand land use change patterns, identify potential drivers of change, and inform land use planning and management decisions.\n\n\n3.4.2 Output Files\n\n\n\n\n\n\n\n\nFile Name\nType\nDescription\n\n\n\n\nland_use_change_map_[PreQuES_ChangeTrajectory].tif\nRaster\nMap depicting changes in land use between the specified time periods.\n\n\ntransition_matrix_[PreQuES_luc_change_transition_table ].csv\nCSV\nTable showing the area of land that transitioned between each land use category.\n\n\nPreQuES_ChangeTrajectory_map.tif.aux.xm\nxmlfile\n\n\n\ntransition_matrix_[PreQuES_ChangeTrajectory_lookup].csv\nCSV\nTable showing the area of land that transitioned between each land use category.\n\n\n[PreQuES_report].html\nHTML\nA report summarizing the analysis results with visualizations and tables.\n\n\n\n\n\n3.4.3 Report Interpretation\nPre-QUES Land cover change analysis or land cover change analysis is carried out to determine the tendency of land cover changes in an area over a period of time. This analysis is carried out using land cover map data at two different time periods. In addition, by entering planning unit data into the analysis process, the tendency of land cover changes in each existing planning unit class can be identified. The information generated through this analysis can be used in the planning process for various things. Among them are: determining development priorities, knowing the factors that trigger changes in land use, planning future development scenarios, etc.",
     "crumbs": [
       "Quantification of Environmental Services (QUES)",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Land use changes and trajectories</span>"
+    ]
+  },
+  {
+    "objectID": "03-preques.html#theoretical-background",
+    "href": "03-preques.html#theoretical-background",
+    "title": "3  Land use changes and trajectories",
+    "section": "3.5 Theoretical Background",
+    "text": "3.5 Theoretical Background\n\n3.5.1 Model Description\n\n\n3.5.2 Key Assumptions\n\n\n3.5.3 Limitations",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Land use changes and trajectories</span>"
+    ]
+  },
+  {
+    "objectID": "03-preques.html#references",
+    "href": "03-preques.html#references",
+    "title": "3  Land use changes and trajectories",
+    "section": "3.6 References",
+    "text": "3.6 References",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Land use changes and trajectories</span>"
+    ]
+  },
+  {
+    "objectID": "04-carbon.html",
+    "href": "04-carbon.html",
+    "title": "4  Carbon stock dynamic",
+    "section": "",
+    "text": "4.1 Description",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Carbon stock dynamic</span>"
+    ]
+  },
+  {
+    "objectID": "04-carbon.html#usage",
+    "href": "04-carbon.html#usage",
+    "title": "4  Carbon stock dynamic",
+    "section": "4.2 Usage",
+    "text": "4.2 Usage\n\n4.2.1 Workflow\n\n\n4.2.2 Step-by step instructions\n\n\n4.2.3 Tips",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Carbon stock dynamic</span>"
+    ]
+  },
+  {
+    "objectID": "04-carbon.html#data-requirements",
+    "href": "04-carbon.html#data-requirements",
+    "title": "4  Carbon stock dynamic",
+    "section": "4.3 Data Requirements",
+    "text": "4.3 Data Requirements\n\n4.3.1 Input Data and Parameters\n\n\n4.3.2 Example Datasets\n\n\n4.3.3 Data Acquistion",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Carbon stock dynamic</span>"
+    ]
+  },
+  {
+    "objectID": "04-carbon.html#outputs",
+    "href": "04-carbon.html#outputs",
+    "title": "4  Carbon stock dynamic",
+    "section": "4.4 Outputs",
+    "text": "4.4 Outputs\n\n4.4.1 Output Files\n\n\n4.4.2 Report Interpretation",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Carbon stock dynamic</span>"
+    ]
+  },
+  {
+    "objectID": "04-carbon.html#theoretical-background",
+    "href": "04-carbon.html#theoretical-background",
+    "title": "4  Carbon stock dynamic",
+    "section": "4.5 Theoretical Background",
+    "text": "4.5 Theoretical Background\n\n4.5.1 Model Description\n\n\n4.5.2 Key Assumptions\n\n\n4.5.3 Limitations",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Carbon stock dynamic</span>"
+    ]
+  },
+  {
+    "objectID": "04-carbon.html#references",
+    "href": "04-carbon.html#references",
+    "title": "4  Carbon stock dynamic",
+    "section": "4.6 References",
+    "text": "4.6 References",
+    "crumbs": [
+      "Quantification of Environmental Services (QUES)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Carbon stock dynamic</span>"
     ]
   },
   {
