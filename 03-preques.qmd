@@ -1,19 +1,34 @@
 # Land use changes and trajectories {#sec-pre}
 
----
-title: "PreQuES"
-editor: Ira Ratna
-  markdown: 
-    wrap: sentence
----
-
 ## Description
+
+Pre-QuES (Preliminary Quantification of Ecosystem Services) is a land use change assessment module that provides key information to identify potential drivers of land use change. This analysis quantifies land cover types and their changes over time, identifies specific land use change trajectories, breaks down changes by administrative or planning units, and visualizes land use dynamics through maps and Sankey-charts.
 
 ## Usage
 
 ### Workflow
 
+![](images/PreQuES/PreQuES_steps.png)
+
+Data Preparation
+
+Before using the Pre-QuES Analysis tool, prepare the following:
+
+• Land Cover Maps: Two raster files (GeoTIFF format) representing land use/cover for two different time points (T1 and T2)
+
+• Planning Unit Map: A raster file (GeoTIFF format) or shapefile of administrative or management zones.
+
+• Land Use/Cover Lookup Table: A CSV file describing raster values with their corresponding land cover classes.
+
+• Planning Unit Table: A CSV file describes raster values with their corresponding planning unit classes. This file is required only if the planning unit map is in raster (GeoTIFF) format. • Trajectory Rules: A CSV file defining rules for classifying land use change trajectories
+
 ### Step-by step instructions
+
+Step 1: Uploading Data
+
+Step 2: Setting Analysis Parameters
+
+Step 3: Running the Analysis
 
 ### Tips
 
@@ -30,3 +45,13 @@ editor: Ira Ratna
 ### Output Files
 
 ### Report Interpretation
+
+## Theoretical Background
+
+### Model Description
+
+### Key Assumptions
+
+### Limitations
+
+## References
