@@ -156,19 +156,6 @@ While your intervention look up table should include the following columns: no; 
 
 ### Input Data & Parameters
 
-### Example Datasets
-
-Practice data sets used in this module can be accessed at **agroforestri.id/lumens-lasem**
-
-### Data Acquisition
-
-For this module, input data may be obtained from global or national-level data sources.
-The example dataset for this module, i.e. the crop suitability parameters and intervention lookup table, are obtained from the Ministry of Agriculture’s land suitability technical manual which can be accessed [here](https://repository.pertanian.go.id/items/fecc0ad1-d13b-46f5-add6-8917dcccc7a3).
-
-## Outputs
-
-### Output Files
-
 +--------+----------------------------------+------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **No** | **Data Name**                    | **Format** | **Projection Requirements**  | **Description**                                                                                                                                 | **Source**                                                                                                                                                       |
 +--------+----------------------------------+------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -242,6 +229,19 @@ The example dataset for this module, i.e. the crop suitability parameters and in
 +--------+----------------------------------+------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 18\.   | Peat depth                       | TIFF       | 1:250.000                    | Thickness of peat                                                                                                                               | Ministry of Agriculture                                                                                                                                          |
 +--------+----------------------------------+------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+### Example Datasets
+
+Practice data sets used in this module can be accessed at **agroforestri.id/lumens-lasem**
+
+### Data Acquisition
+
+For this module, input data may be obtained from global or national-level data sources.
+The example dataset for this module, i.e. the crop suitability parameters and intervention lookup table, are obtained from the Ministry of Agriculture’s land suitability technical manual which can be accessed [here](https://repository.pertanian.go.id/items/fecc0ad1-d13b-46f5-add6-8917dcccc7a3).
+
+## Outputs
+
+### Output Files
 
 ### Report Interpretation
 
